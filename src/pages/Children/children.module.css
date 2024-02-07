@@ -1,0 +1,169 @@
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.kid {
+  width: 50%;
+  height: 50%;
+  margin: 0 auto;
+  background-color: rgba(104, 227, 230, 0.4);
+  border-radius: 50%;
+  margin-top: 1rem;
+}
+
+.groups {
+  background-color: rgba(95, 158, 160, 0.5);
+  width: 85%;
+  margin: 0.5rem auto;
+  border-radius: 0.5rem;
+}
+
+.cContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.maininfo {
+  border-radius: 0.5rem;
+}
+
+.scontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0.5rem 0 0.5rem 0;
+  width: 20%;
+  margin: 1rem;
+  background-color: #fdfeff;
+  color: #423f40;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0 0.313rem 0.938rem;
+          box-shadow: rgba(0, 0, 0, 0.35) 0 0.313rem 0.938rem;
+}
+
+.scontainer .col1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row wrap;
+          flex-direction: row wrap;
+  width: 100%;
+  padding: 0.1rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.scontainer .col,
+.scontainer .col2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row wrap;
+          flex-direction: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 0 auto;
+  width: 95%;
+  background-color: rgba(57, 100, 74, 0.5);
+  border-top: 0.05rem solid #cbcac4;
+  padding-right: 2rem;
+  padding-left: 0.6rem;
+  padding-top: 0.6rem;
+}
+
+.scontainer .col .info1,
+.scontainer .col2 .info1 {
+  padding-right: 2rem;
+  padding-left: 0.15rem;
+}
+
+.scontainer .col .info,
+.scontainer .col2 .info {
+  padding-right: 1.7rem;
+  padding-left: 0.15rem;
+}
+
+.scontainer .bold {
+  color: #0c8da8;
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding-right: 2rem;
+}
+
+.scontainer .bold2 {
+  color: #00a881;
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.scontainer h3 {
+  text-align: left;
+}
+
+.btn2 {
+  margin-right: 0.5rem;
+}
+
+.col2 {
+  border-bottom: 0.05rem solid #cbcac4;
+}
+
+.regForm {
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: left;
+  margin: 0 auto;
+  width: 40%;
+  background-color: #fdfeff;
+}
+
+.regForm .reg {
+  color: #0c8da8;
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+}
+/*# sourceMappingURL=children.module.css.map */

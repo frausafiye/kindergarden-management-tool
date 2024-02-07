@@ -1,0 +1,308 @@
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.cContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.acontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0.5rem 0 0.5rem 0;
+  width: 21em;
+  margin: 1rem 1rem;
+  background-color: #fdfeff;
+  color: #fdfeff;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0 0.313rem 0.938rem;
+          box-shadow: rgba(0, 0, 0, 0.35) 0 0.313rem 0.938rem;
+}
+
+.acontainer .col1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row wrap;
+          flex-direction: row wrap;
+  width: 100%;
+  padding: 0.5rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.acontainer .col,
+.acontainer .col2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row wrap;
+          flex-direction: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 0 auto;
+  width: 95%;
+  background-color: #0c8d9b;
+  border-top: 0.05rem solid #cbcac4;
+  padding-right: 2rem;
+  padding-left: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.acontainer .col .info1,
+.acontainer .col2 .info1 {
+  padding-right: 2rem;
+  padding-left: 0.15rem;
+}
+
+.acontainer .col .info,
+.acontainer .col2 .info {
+  padding-right: 1.7rem;
+  padding-left: 0.15rem;
+}
+
+.acontainer .bold {
+  color: #0c8da8;
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding-right: 2rem;
+}
+
+.acontainer .bold2 {
+  color: #ff4e13;
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.acontainer h3 {
+  text-align: left;
+}
+
+.scontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0.5rem 0 0.5rem 0;
+  width: 21em;
+  margin: 5rem 10rem;
+  background-color: #f5f5f5;
+  color: rgba(0, 0, 0, 0.9);
+  border-radius: 0.5rem;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0 0.313rem 0.938rem;
+          box-shadow: rgba(0, 0, 0, 0.35) 0 0.313rem 0.938rem;
+}
+
+.scontainer .col1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row wrap;
+          flex-direction: row wrap;
+  width: 100%;
+  padding: 0.5rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.scontainer .col,
+.scontainer .col2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row wrap;
+          flex-direction: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 0 auto;
+  width: 95%;
+  background-color: rgba(104, 227, 230, 0.4);
+  border-top: 0.05rem solid #cbcac4;
+  padding-right: 2rem;
+  padding-left: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.scontainer .col .info1,
+.scontainer .col2 .info1 {
+  padding-right: 2rem;
+  padding-left: 0.15rem;
+}
+
+.scontainer .col .info,
+.scontainer .col2 .info {
+  padding-right: 1.7rem;
+  padding-left: 0.15rem;
+}
+
+.scontainer .bold {
+  color: #0c8da8;
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding-right: 2rem;
+}
+
+.scontainer .bold2 {
+  color: #ff4e13;
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.scontainer h3 {
+  text-align: left;
+}
+
+.scontainer .col2 {
+  border-bottom: 0.05rem solid #cbcac4;
+}
+
+.regForm {
+  margin: 2rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 25%;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0 0.313rem 0.938rem;
+          box-shadow: rgba(0, 0, 0, 0.35) 0 0.313rem 0.938rem;
+}
+
+.regForm .formContainer {
+  margin: 0 auto;
+}
+
+.regForm h1 {
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+  color: #0c8da8;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.regForm .addinfo input[type="text"] {
+  margin: 0 auto;
+  border-radius: 0.3rem;
+  background-color: #f9a26b4d;
+  color: #423f40;
+  border: 0.1rem solid #f9a26b;
+  padding: 5px 5px;
+}
+
+.regForm .addinfo label {
+  color: #423f40;
+  font-weight: 500;
+}
+
+.maincontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 2rem auto;
+  width: 30%;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0 0.313rem 0.938rem;
+          box-shadow: rgba(0, 0, 0, 0.35) 0 0.313rem 0.938rem;
+}
+
+.maincontainer .addcontainer {
+  width: 40%;
+  margin: 0 auto;
+}
+
+.maincontainer .addinfo input[type="text"] {
+  border-radius: 0.3rem;
+  background-color: #f9a26b4d;
+  color: #423f40;
+  border: 0.1rem solid #f9a26b;
+  padding: 5px 5px;
+}
+
+.maincontainer .addinfo label {
+  color: #423f40;
+  font-weight: 500;
+}
+
+.maincontainer .title h3 {
+  color: #0c8da8;
+  font-size: 1.15rem;
+  text-align: center;
+  margin-right: 0rem;
+  margin-bottom: 1rem;
+}
+
+.maincontainer .btn {
+  width: 100%;
+  margin: 2rem 12rem;
+}
+
+.maincontainer .btn p {
+  padding-top: 0.5rem;
+}
+/*# sourceMappingURL=groups.module.css.map */
