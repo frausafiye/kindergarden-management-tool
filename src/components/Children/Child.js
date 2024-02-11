@@ -1,5 +1,4 @@
 import React, { useContext, useState } from "react";
-import { useHistory } from "react-router-dom";
 import { MyContext } from "../../Container";
 import kid from "../../images/kid_avatar.svg";
 import kid2 from "../../images/kid_avatar2.svg";
@@ -15,7 +14,6 @@ export default function Child(props) {
   const [selectedGroup, setSelectedGroup] = useState(null);
   const child = props.child;
   const randImg = images[props.imageNum];
-  const history = useHistory();
 
   const getAllGroups = () => {
     axios({
