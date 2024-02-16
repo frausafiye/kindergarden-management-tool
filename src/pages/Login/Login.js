@@ -26,9 +26,6 @@ export default function Login(props) {
     axios({
       method: "POST",
       withCredentials: true,
-      sameSite: "none",
-      secure: true,
-      //change it when using locally!
       url: `${process.env.REACT_APP_BASE_URL}/users/login`,
       headers: {
         Accept: "application/json",
