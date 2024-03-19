@@ -11,10 +11,12 @@ export default function Tpage(props) {
   return (
     <div className={styles.tpContainer}>
       <UserInfoSidebar />
-      <div className={styles.features}>
-        {user.group && <GroupCard />}
-        <ToDo />
-        <Calendar />
+      <div className={styles.featuresBox}>
+        <div className={styles.features}>
+          {user.group && <GroupCard />}
+          <ToDo />
+          <Calendar />
+        </div>
       </div>
     </div>
   );

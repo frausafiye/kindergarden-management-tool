@@ -30,7 +30,16 @@
   flex-basis: 0;
   max-width: 100%;
 }
-
+.col-start,
+.col-center,
+.col-end {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.col-center {
+  text-align: center;
+}
 .month {
   margin-left: 0.15rem;
 }
@@ -53,8 +62,6 @@
   font-size: 1.2rem;
   padding: 1.25em 0;
   border-bottom: 0.05rem solid $primary-blue;
-  position: relative;
-  left: 1rem;
 }
 .calendar .header .icon {
   cursor: pointer;
@@ -65,12 +72,7 @@
   transition: 0.25s ease-out;
   color: $primary-orange;
 }
-.calendar .header .icon:first-of-type {
-  margin-left: 2.75em;
-}
-.calendar .header .icon:last-of-type {
-  margin-right: 2em;
-}
+
 .calendar .days {
   text-transform: uppercase;
   text-align: center;
@@ -80,8 +82,6 @@
   padding: 1.75em 0;
   border-bottom: 0.05rem solid $primary-blue;
   width: 100%;
-  position: relative;
-  left: 1rem;
 }
 .calendar .body .cell {
   position: relative;
@@ -99,8 +99,7 @@
 
 .calendar .body .row {
   border-bottom: 0.05rem solid $secondary-blue;
-  position: relative;
-  left: 1rem;
+  margin: 0 auto;
 }
 .calendar .body .row:last-child {
   border-bottom: none;
@@ -163,12 +162,6 @@
     font-size: 0.95rem;
     color: $dark;
   }
-  .calendar .header .icon:first-of-type {
-    margin-left: 2.75em;
-  }
-  .calendar .header .icon:last-of-type {
-    margin-right: 1em;
-  }
   .calendar .days {
     font-size: 0.5rem;
   }
@@ -189,12 +182,7 @@
     font-size: 0.95rem;
     color: $dark;
   }
-  .calendar .header .icon:first-of-type {
-    margin-left: 2.75em;
-  }
-  .calendar .header .icon:last-of-type {
-    margin-right: 1em;
-  }
+
   .calendar .days {
     font-size: 0.5rem;
   }

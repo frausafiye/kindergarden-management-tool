@@ -11,6 +11,10 @@ $btnBg: #00a881;
 
   .actions {
     display: flex;
+    label {
+      display: flex;
+      width: 100%;
+    }
   }
 
   .btn {
@@ -31,10 +35,8 @@ $btnBg: #00a881;
   }
 }
 .todos-container {
+  margin-bottom: 1rem;
   .todo-form {
-    label {
-      display: flex;
-    }
     .input-item {
       input {
         padding: 8px;
@@ -46,7 +48,7 @@ $btnBg: #00a881;
     }
   }
   .todos {
-    //padding-top: 20px;
+    margin-bottom: 1rem;
 
     .todo-item {
       padding: 5px;
@@ -61,6 +63,7 @@ $btnBg: #00a881;
 }
 
 .todones-container {
+  margin-bottom: 1rem;
   .todones-item {
     padding: 5px;
     background: $inputBg;
@@ -77,11 +80,5 @@ $btnBg: #00a881;
   }
 }
 .input-todo {
-  width: 18rem;
-}
-
-@media only screen and (max-width: 768px) {
-  .input-todo {
-    width: 80%;
-  }
+  width: 100%;
 }
