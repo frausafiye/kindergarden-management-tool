@@ -15,7 +15,7 @@ export default function Container(props) {
   const reset = async () => {
     localStorage.removeItem("kg");
     localStorage.removeItem("user");
-    await setIsLogin(false);
+    setIsLogin(false);
     await history.push("/login");
     setUser(null);
   };

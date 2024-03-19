@@ -41,7 +41,6 @@ export default function Tpage(props) {
               value="edit"
               className="edit"
               onClick={() => handleEdit()}
-              className="edit"
             >
               Edit Info
             </button>
