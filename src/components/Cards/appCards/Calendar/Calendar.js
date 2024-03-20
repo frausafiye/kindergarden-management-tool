@@ -79,7 +79,7 @@ export default function Calendar() {
     );
   };
   const days = () => {
-    const dateFormat = "EEEE";
+    const dateFormat = "EEEEEE"; //EEEE
     const days = [];
     let startDate = startOfWeek(currentDate);
     for (let i = 0; i < 7; i++) {
@@ -150,19 +150,6 @@ export default function Calendar() {
   };
 
   return (
-    // <div className="calendar">
-    //   {showForm && (
-    //     <div>
-    //       <CalendarForm />
-    //     </div>
-    //   )}
-    //   <>
-    //     <div>{header()}</div>
-    //     <div>{days()}</div>
-    //     <div onClick={() => setShowForm(!showForm)}>{cells()}</div>
-    //   </>
-    //   <EventsCalendar />
-
     <div className={page === "mpage" ? styles.calendar : Tstyles.calendar}>
       <div className="calendar">
         {showForm && (
