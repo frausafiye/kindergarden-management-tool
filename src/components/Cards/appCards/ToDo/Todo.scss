@@ -8,6 +8,11 @@ $btnBg: #00a881;
   h3 {
     font-size: 1.2rem;
   }
+  .todo-form {
+    label.input-item {
+      display: block;
+    }
+  }
 
   .actions {
     display: flex;
