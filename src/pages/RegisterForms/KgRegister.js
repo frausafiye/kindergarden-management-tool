@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import ManagerRegister from "./ManagerRegister";
-import styles from "./registerForm.module.scss";
+import styles from "../../components/Register/form/registerForm.module.scss";
 import { submitForm } from "../../logic/registerLogic";
+import {
+  AddressFields,
+  ContactFields,
+} from "../../components/Register/form/index";
+import { InputBox } from "../../components/Register/ui/InputBox";
 
 export default function KgRegister() {
   const [data, setData] = useState({});
@@ -24,10 +29,9 @@ export default function KgRegister() {
           name="kgForm"
         >
           <div className="reg">Register Kindergarten!</div>
-
-          <div className="regBox">
-            <div>
-              <div className="inputBox">
+          <div>
+            <div className="regBox">
+              <InputBox>
                 <label className="details">Kindergarten name</label>
                 <br />
                 <input
@@ -36,80 +40,17 @@ export default function KgRegister() {
                   placeholder="Kindergarten Name"
                   required
                 />
-              </div>
-
-              <div className="inputBox">
-                <label className="details">Phone number</label>
-                <br />
-                <input
-                  type="text"
-                  name="phoneNumber"
-                  placeholder="Phone Number"
-                  required
-                />
-              </div>
-
-              <div className="inputBox">
-                <label className="details">Email</label>
-                <br />
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="E-mail"
-                  required
-                />
-              </div>
-
-              <div className="inputBox">
-                <label className="details">Street</label>
-                <br />
-                <input
-                  type="text"
-                  name="street"
-                  placeholder="Street"
-                  required
-                />
-              </div>
+              </InputBox>
+              <ContactFields />
+              <AddressFields />
             </div>
-
-            <div className="smallBox">
-              <div className="inputBox">
-                <label className="details">Number</label>
-                <br />
-                <input
-                  type="text"
-                  name="number"
-                  placeholder="Number"
-                  required
-                />
-              </div>
-
-              <div className="inputBox">
-                <label className="details">City</label>
-                <br />
-                <input type="text" name="city" placeholder="City" required />
-              </div>
-
-              <div className="inputBox">
-                <label className="details">Post code</label>
-                <br />
-                <input
-                  type="number"
-                  name="postcode"
-                  required
-                  placeholder="Postcode"
-                />
-              </div>
-
-              <br />
-              <div className={styles.btnContainer}>
-                <button type="submit" value="Next" className="next">
-                  Next
-                </button>
-                <Link to="/">
-                  <button className="cancel">Cancel</button>
-                </Link>
-              </div>
+            <div className={styles.btnContainer}>
+              <button type="submit" value="Next" className="next">
+                Next
+              </button>
+              <Link to="/">
+                <button className="cancel">Cancel</button>
+              </Link>
             </div>
           </div>
         </form>

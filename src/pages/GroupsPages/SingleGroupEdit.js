@@ -73,7 +73,6 @@ export default function SingleGroupEdit(props) {
       <form
         className={styles.addcontainer}
         onSubmit={handleEdit}
-        name="managerForm"
         key="group._id"
       >
         <div className={styles.title}>

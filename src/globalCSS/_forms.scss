@@ -1,24 +1,21 @@
 @import "./variables";
 
 .reg {
-    color: $primary-blue;
-    font-size: 2.8rem;
-    font-weight: 500;    
-    margin-top: 1rem;
+  color: $primary-blue;
+  font-size: 2.8rem;
+  font-weight: 500;
+  margin-top: 1rem;
 }
 
 .regBox {
-  display: flex;
+  column-count: 2;
 }
 
 .smallBox {
   margin-left: 2rem;
 }
-  
-.inputBox {
-  margin-top: 10px;
-  align-items: center;
 
+.inputBox {
   input {
     width: 100%;
     padding: 5px 10px;
@@ -30,21 +27,21 @@
 
   input::placeholder {
     padding: 5px;
-   }
-}  
-  
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .reg {
     font-size: 1.8rem;
   }
-  .inputBox {  
+  .inputBox {
     input {
       padding: 3px;
     }
 
     input::placeholder {
       padding: 0;
-     }
+    }
   }
 
   .regBox {
@@ -56,4 +53,3 @@
     margin-left: 0rem;
   }
 }
-

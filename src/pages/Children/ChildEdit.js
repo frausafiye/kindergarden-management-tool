@@ -67,7 +67,6 @@ export default function ChildEdit(props) {
       <form
         className={styles.formContainer}
         onSubmit={(e) => handleEdit(e)}
-        name="managerForm"
         key="child._id"
       >
         <div className={styles.formContColumn}>

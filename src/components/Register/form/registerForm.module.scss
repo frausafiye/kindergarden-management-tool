@@ -1,4 +1,4 @@
-@import "../../globalCSS/variables";
+@import "../../../globalCSS/variables";
 
 .regForm {
   display: flex;
@@ -15,41 +15,41 @@
   align-items: center;
   height: 80vh;
   flex-direction: column;
-  color:$primary-blue;
+  color: $primary-blue;
 }
 
 .btnContainer {
   display: flex;
-  
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
-.listUnstyled{
+.listUnstyled {
   display: inline;
   border: 5xp black solid;
   margin: 10px;
-  list-style-type: none;    
+  list-style-type: none;
 }
 
-.listUnstyled li{
+.listUnstyled li {
   margin: 10px;
   display: flex;
   justify-content: left;
   align-items: center;
-  
 }
 
-.listUnstyled input{
+.listUnstyled input {
   width: 40px;
 }
 
-.submitButtons{
+.submitButtons {
   margin: 20px 0 0 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.submitButtons button{
+.submitButtons button {
   width: 100px;
 }
-
-

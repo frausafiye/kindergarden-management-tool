@@ -88,7 +88,6 @@ export default function EditProfile(props) {
           <form
             className={styles.formContainer}
             onSubmit={(e) => changePasswordHandler(e)}
-            name="managerForm"
           >
             <div>
               <div>
@@ -127,11 +126,7 @@ export default function EditProfile(props) {
 
       {/* edit form without password: */}
       {!showSuccess && !showPasswordForm && (
-        <form
-          className={styles.formContainer}
-          onSubmit={(e) => editHandler(e)}
-          name="managerForm"
-        >
+        <form className={styles.formContainer} onSubmit={(e) => editHandler(e)}>
           <div className={styles.regBox}>
             <div>
               <div>
