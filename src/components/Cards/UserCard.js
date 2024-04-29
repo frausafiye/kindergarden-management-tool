@@ -5,7 +5,7 @@ import user2 from "../../images/user2.png";
 import user3 from "../../images/user3.png";
 import user4 from "../../images/user4.png";
 import { MyContext } from "../../Container";
-import styles from "../../pages/Dashboards/TeacherDashboard/TeacherDashboard.module.scss";
+import styles from "../../pages/Teachers/Teachers.module.scss";
 
 const images = [user1, user2, user3, user4];
 
@@ -98,130 +98,128 @@ export default function UserCard(props) {
   };
 
   return (
-    <div key={_id}>
-      <div className={styles.scontainer} bg="success">
-        <div className={styles.imgContainer}>
-          <img variant="top" src={randImg} alt="user" />
+    <div className={styles.sContainer} bg="success" key={_id}>
+      <div className={styles.imgContainer}>
+        <img variant="top" src={randImg} alt="user" />
+      </div>
+      <div className={styles.card}>
+        <p className={styles.cardtitle}>
+          {firstName} {lastName}
+        </p>
+      </div>
+      <div className={styles.listgroup}>
+        <div className={styles.listgroupitem}>
+          {group ? `Group: ${group.groupName}` : "Please assign a group"}
         </div>
-        <div className={styles.card}>
-          <p className={styles.cardtitle}>
-            {firstName} {lastName}
-          </p>
+      </div>
+      <div className={styles.btn}>
+        <button
+          className="edit2"
+          onClick={!groups ? () => getAllGroups() : () => setGroups(null)}
+        >
+          edit group
+        </button>
+        <button className="edit3" onClick={() => setShowRoles(!showRoles)}>
+          edit role
+        </button>
+      </div>
+      {/* Role buttons */}
+      {showRoles && (
+        <div className={styles.listgroupitem}>
+          <div className={styles.listgroupitem}>
+            <form>
+              <label htmlFor="Teacher" style={{ flexDirection: "row" }}>
+                <input
+                  style={{ display: "inline", width: "20px", height: "20px" }}
+                  type="radio"
+                  id="Teacher"
+                  name="role"
+                  value="Teacher"
+                  onClick={() => setSelectedRole("Teacher")}
+                />
+                Teacher
+              </label>
+
+              <label htmlFor="Manager">
+                <input
+                  style={{ display: "inline", width: "20px", height: "20px" }}
+                  type="radio"
+                  id="Manager"
+                  name="role"
+                  value="Manager"
+                  onClick={() => setSelectedRole("Manager")}
+                />
+                Manager
+              </label>
+            </form>
+          </div>
+          <button
+            type="submit"
+            className="add"
+            style={{ display: "inline", margin: "0 auto" }}
+            onClick={() => changeRole(_id)}
+            disabled={selectedRole ? false : true}
+          >
+            save
+          </button>
         </div>
+      )}
+      {/* Group name buttons */}
+      {groups && (
         <div className={styles.listgroup}>
           <div className={styles.listgroupitem}>
-            {group ? `Group: ${group.groupName}` : "Please assign a group"}
+            <form>
+              {groups.map((group) => {
+                return (
+                  <label
+                    key={group.groupName}
+                    htmlFor={group.groupName}
+                    style={{ flexDirection: "row" }}
+                  >
+                    <input
+                      style={{
+                        display: "inline",
+                        width: "20px",
+                        height: "20px",
+                      }}
+                      type="radio"
+                      id={group.groupName}
+                      name="group"
+                      value={group.groupName}
+                      onClick={() => setSelectedGroup(group._id)}
+                    />
+                    {group.groupName}
+                  </label>
+                );
+              })}
+              <label key="none" htmlFor="none">
+                <input
+                  style={{
+                    display: "inline",
+                    width: "20px",
+                    height: "20px",
+                  }}
+                  type="radio"
+                  id="none"
+                  name="group"
+                  value="none"
+                  onClick={() => setSelectedGroup("empty")}
+                />
+                none
+              </label>
+            </form>
           </div>
-        </div>
-        <div className={styles.btn}>
           <button
-            className="edit2"
-            onClick={!groups ? () => getAllGroups() : () => setGroups(null)}
+            type="submit"
+            className="add"
+            style={{ display: "block", margin: "0 auto" }}
+            onClick={() => changeGroup(_id)}
+            disabled={selectedGroup ? false : true}
           >
-            edit group
-          </button>
-          <button className="edit3" onClick={() => setShowRoles(!showRoles)}>
-            edit role
+            save
           </button>
         </div>
-        {/* Role buttons */}
-        {showRoles && (
-          <div className={styles.listgroupitem}>
-            <div className={styles.listgroupitem}>
-              <form>
-                <label htmlFor="Teacher" style={{ flexDirection: "row" }}>
-                  <input
-                    style={{ display: "inline", width: "20px", height: "20px" }}
-                    type="radio"
-                    id="Teacher"
-                    name="role"
-                    value="Teacher"
-                    onClick={() => setSelectedRole("Teacher")}
-                  />
-                  Teacher
-                </label>
-
-                <label htmlFor="Manager">
-                  <input
-                    style={{ display: "inline", width: "20px", height: "20px" }}
-                    type="radio"
-                    id="Manager"
-                    name="role"
-                    value="Manager"
-                    onClick={() => setSelectedRole("Manager")}
-                  />
-                  Manager
-                </label>
-              </form>
-            </div>
-            <button
-              type="submit"
-              className="add"
-              style={{ display: "inline", margin: "0 auto" }}
-              onClick={() => changeRole(_id)}
-              disabled={selectedRole ? false : true}
-            >
-              save
-            </button>
-          </div>
-        )}
-        {/* Group name buttons */}
-        {groups && (
-          <div className={styles.listgroup}>
-            <div className={styles.listgroupitem}>
-              <form>
-                {groups.map((group) => {
-                  return (
-                    <label
-                      key={group.groupName}
-                      htmlFor={group.groupName}
-                      style={{ flexDirection: "row" }}
-                    >
-                      <input
-                        style={{
-                          display: "inline",
-                          width: "20px",
-                          height: "20px",
-                        }}
-                        type="radio"
-                        id={group.groupName}
-                        name="group"
-                        value={group.groupName}
-                        onClick={() => setSelectedGroup(group._id)}
-                      />
-                      {group.groupName}
-                    </label>
-                  );
-                })}
-                <label key="none" htmlFor="none">
-                  <input
-                    style={{
-                      display: "inline",
-                      width: "20px",
-                      height: "20px",
-                    }}
-                    type="radio"
-                    id="none"
-                    name="group"
-                    value="none"
-                    onClick={() => setSelectedGroup("empty")}
-                  />
-                  none
-                </label>
-              </form>
-            </div>
-            <button
-              type="submit"
-              className="add"
-              style={{ display: "block", margin: "0 auto" }}
-              onClick={() => changeGroup(_id)}
-              disabled={selectedGroup ? false : true}
-            >
-              save
-            </button>
-          </div>
-        )}
-      </div>
+      )}
     </div>
   );
 }
