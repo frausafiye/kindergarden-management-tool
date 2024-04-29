@@ -1,10 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "../../components/Register/form/registerForm.module.scss";
+import { AlignedContainer } from "../../components/ui/styledComponents";
 
 export default function Register() {
   return (
-    <div className={styles.regContainer}>
+    <AlignedContainer>
+      {/* <div className={styles.regContainer}> */}
       <div className="reg">Choose your Account!</div>
       <br />
       <div className="btnform">
@@ -15,6 +17,7 @@ export default function Register() {
           <button className="att">Register as Teacher</button>
         </Link>
       </div>
-    </div>
+      {/* </div> */}
+    </AlignedContainer>
   );
 }

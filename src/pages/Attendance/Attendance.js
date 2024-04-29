@@ -6,6 +6,7 @@ import axios from "axios";
 import Here from "./Here";
 import NotHere from "./NotHere";
 import { MyContext } from "../../Container";
+import { AlignedContainer } from "../../components/ui/styledComponents";
 
 export default function Attendance() {
   const { user, authCheckHandler } = useContext(MyContext);
@@ -84,8 +85,8 @@ export default function Attendance() {
   };
 
   return (
-    <div className={styles.tAttendance}>
-      <div>
+    <AlignedContainer>
+      <div className={styles.tAttendance}>
         <h3>Attendance</h3>
         <div className={styles.centering}>
           <NotHere
@@ -100,6 +101,6 @@ export default function Attendance() {
           />
         </div>
       </div>
-    </div>
+    </AlignedContainer>
   );
 }

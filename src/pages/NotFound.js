@@ -1,9 +1,9 @@
-import React from 'react'
+import { AlignedContainer } from "../components/ui/styledComponents";
 
 export default function NotFound() {
-    return (
-        <div>
-            <h1>Page not found</h1>
-        </div>
-    )
+  return (
+    <AlignedContainer>
+      <h1>Page not found</h1>
+    </AlignedContainer>
+  );
 }

@@ -1,33 +1,29 @@
 @import "../../globalCSS/variables";
 .fcontainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    flex-direction: column;
-    min-height: 90vh;
-    
-    
-  }
-  
-  .btnContainer {
-    display: flex;
-    justify-content: space-evenly;
-    margin-bottom:1rem ;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+}
 
-  #explore{
-    margin-right: 0;
-  }
-  
+.btnContainer {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 1rem;
+}
 
-  .loginBox {
+#explore {
+  margin-right: 0;
+}
+
+.loginBox {
   padding-left: 5rem;
   padding-right: 5rem;
-  }
+}
 
-  @media only screen and (max-width: 768px){
-    .loginBox{
-      padding: 0;
-    }
+@media only screen and (max-width: 768px) {
+  .loginBox {
+    padding: 0;
   }
+}

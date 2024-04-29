@@ -10,7 +10,7 @@ import styles from "../../pages/Dashboards/TeacherDashboard/TeacherDashboard.mod
 const images = [user1, user2, user3, user4];
 
 export default function UserCard(props) {
-  const user = props.user;
+  const { _id, firstName, lastName, group } = props.user;
   const randImg = images[props.imageNum];
   const [groups, setGroups] = useState();
   const [showRoles, setShowRoles] = useState(false);
@@ -98,21 +98,19 @@ export default function UserCard(props) {
   };
 
   return (
-    <div key={user._id}>
+    <div key={_id}>
       <div className={styles.scontainer} bg="success">
         <div className={styles.imgContainer}>
-          <img variant="top" src={randImg} />
+          <img variant="top" src={randImg} alt="user" />
         </div>
         <div className={styles.card}>
           <p className={styles.cardtitle}>
-            {user.firstName} {user.lastName}
+            {firstName} {lastName}
           </p>
         </div>
         <div className={styles.listgroup}>
           <div className={styles.listgroupitem}>
-            {user.group
-              ? `Group: ${user.group.groupName}`
-              : "Please assign a group"}
+            {group ? `Group: ${group.groupName}` : "Please assign a group"}
           </div>
         </div>
         <div className={styles.btn}>
@@ -160,7 +158,7 @@ export default function UserCard(props) {
               type="submit"
               className="add"
               style={{ display: "inline", margin: "0 auto" }}
-              onClick={() => changeRole(user._id)}
+              onClick={() => changeRole(_id)}
               disabled={selectedRole ? false : true}
             >
               save
@@ -216,7 +214,7 @@ export default function UserCard(props) {
               type="submit"
               className="add"
               style={{ display: "block", margin: "0 auto" }}
-              onClick={() => changeGroup(user._id)}
+              onClick={() => changeGroup(_id)}
               disabled={selectedGroup ? false : true}
             >
               save

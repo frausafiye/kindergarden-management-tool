@@ -4,6 +4,7 @@ import { MyContext } from "../../Container";
 import styles from "../../pages/Dashboards/TeacherDashboard/TeacherDashboard.module.scss";
 export default function GroupCard() {
   const { user } = useContext(MyContext);
+  const { groupName, description, ageGroup, room } = user.group;
   const history = useHistory();
 
   const handleView = () => {
@@ -16,11 +17,11 @@ export default function GroupCard() {
     <div className={styles.tGroup}>
       <div className={styles.gHead}>
         <h2>Group:</h2>
-        <h3 className={styles.gHeader}>{user.group.groupName}</h3>
+        <h3 className={styles.gHeader}>{groupName}</h3>
       </div>
-      {user.group.description && <p>{user.group.description}</p>}
-      {user.group.ageGroup && <li>Group age: {user.group.ageGroup}</li>}
-      {user.group.room && <li>Room: {user.group.room}</li>}
+      {description && <p>{description}</p>}
+      {ageGroup && <li>Group age: {ageGroup}</li>}
+      {room && <li>Room: {room}</li>}
       <br />
       <br />
       <button onClick={() => handleView()} className="add">

@@ -3,6 +3,7 @@ import axios from "axios";
 import styles from "./children.module.scss";
 import { MyContext } from "../../Container";
 import Child from "./Child";
+import { AlignedContainer } from "../../components/ui/styledComponents";
 
 export default function AllChildren(props) {
   const [children, setChildren] = useState([]);
@@ -45,21 +46,23 @@ export default function AllChildren(props) {
   };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.cContainer}>
-        {children.length
-          ? children.map((child, i) => {
-              return (
-                <Child
-                  key={i}
-                  child={child}
-                  imageNum={i > 3 ? i % 4 : i}
-                  handleEdit={handleEdit}
-                />
-              );
-            })
-          : null}
+    <AlignedContainer>
+      <div className={styles.container}>
+        <div className={styles.cContainer}>
+          {children.length
+            ? children.map((child, i) => {
+                return (
+                  <Child
+                    key={i}
+                    child={child}
+                    imageNum={i > 3 ? i % 4 : i}
+                    handleEdit={handleEdit}
+                  />
+                );
+              })
+            : null}
+        </div>
       </div>
-    </div>
+    </AlignedContainer>
   );
 }

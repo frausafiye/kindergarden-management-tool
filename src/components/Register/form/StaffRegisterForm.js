@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import styles from "./registerForm.module.scss";
 import { sendData, submitForm } from "../../../logic/registerLogic";
 import { InputBox } from "../ui/InputBox";
@@ -10,6 +9,7 @@ import {
   VerificationCodeField,
   PasswordField,
   AddressFields,
+  FormButtons,
 } from "./index";
 
 export default function StaffRegister(props) {
@@ -76,18 +76,7 @@ export default function StaffRegister(props) {
           <ContactFields />
           <AddressFields />
         </div>
-        <div className={styles.btnContainer}>
-          <Link to="/">
-            <button className="cancel">Cancel</button>
-          </Link>
-          <button
-            type="submit"
-            value="Register"
-            className={props.type === "manager" ? "att" : "next"}
-          >
-            Submit
-          </button>
-        </div>
+        <FormButtons type={props.type} />
       </form>
     </div>
   );

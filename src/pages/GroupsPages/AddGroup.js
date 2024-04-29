@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import styles from "./groups.module.scss";
 import { MyContext } from "../../Container";
+import { AlignedContainer } from "../../components/ui/styledComponents";
 
 export default function AddGroup(props) {
   const { user, authCheckHandler } = useContext(MyContext);
@@ -53,72 +54,74 @@ export default function AddGroup(props) {
   };
 
   return (
-    <div className={styles.maincontainer}>
-      <div className={styles.title}>
-        <h3>Information we need:</h3>
-      </div>
-      <form onSubmit={submitForm}>
-        <div className={styles.addcontainer}>
-          <div className={styles.addinfo}>
-            <label>Group Name</label>
-            <br />
-            <input
-              type="text"
-              name="groupName"
-              placeholder="groupName"
-              onChange={grabValue}
-            />
-          </div>
-          <div className={styles.addinfo}>
-            <label>Room</label>
-            <br />
-            <input
-              type="text"
-              name="room"
-              placeholder="room"
-              onChange={grabValue}
-            />
-          </div>
-          <div className={styles.addinfo}>
-            <label className="details">Age Group</label>
-            <br />
-            <input
-              type="text"
-              name="ageGroup"
-              placeholder="ex: children between 1 and 2 years old"
-              onChange={grabValue}
-            />
-          </div>
-          <div className={styles.addinfo}>
-            <label>Description</label>
-            <br />
-            <input
-              type="text"
-              name="description"
-              placeholder="group description"
-              onChange={grabValue}
-            />
-          </div>
+    <AlignedContainer>
+      <div className={styles.maincontainer}>
+        <div className={styles.title}>
+          <h3>Information we need:</h3>
         </div>
-        <div className={styles.btn}>
-          <Link to="/groups">
-            <button type="submit" value="Cancel" className="cancel">
-              Cancel
+        <form onSubmit={submitForm}>
+          <div className={styles.addcontainer}>
+            <div className={styles.addinfo}>
+              <label>Group Name</label>
+              <br />
+              <input
+                type="text"
+                name="groupName"
+                placeholder="groupName"
+                onChange={grabValue}
+              />
+            </div>
+            <div className={styles.addinfo}>
+              <label>Room</label>
+              <br />
+              <input
+                type="text"
+                name="room"
+                placeholder="room"
+                onChange={grabValue}
+              />
+            </div>
+            <div className={styles.addinfo}>
+              <label className="details">Age Group</label>
+              <br />
+              <input
+                type="text"
+                name="ageGroup"
+                placeholder="ex: 1-3 years"
+                onChange={grabValue}
+              />
+            </div>
+            <div className={styles.addinfo}>
+              <label>Description</label>
+              <br />
+              <input
+                type="text"
+                name="description"
+                placeholder="group description"
+                onChange={grabValue}
+              />
+            </div>
+          </div>
+          <div className={styles.btn}>
+            <Link to="/groups">
+              <button type="submit" value="Cancel" className="cancel">
+                Cancel
+              </button>
+            </Link>
+            <button type="submit" value="Submit" className="submit">
+              Submit
             </button>
-          </Link>
-          <button type="submit" value="Submit" className="submit">
-            Submit
-          </button>
-          {message.status && (
-            <p
-              className={!message.status.ok ? "errorMsg" : ""}
-              style={{ fontSize: "0.65rem" }}
-            >
-              {message.status.msg}
-            </p>
-          )}
-        </div>
-      </form>
-    </div>
+            {message.status && (
+              <p
+                className={!message.status.ok ? "errorMsg" : ""}
+                style={{ fontSize: "0.65rem" }}
+              >
+                {message.status.msg}
+              </p>
+            )}
+          </div>
+        </form>
+      </div>
+    </AlignedContainer>
   );
 }

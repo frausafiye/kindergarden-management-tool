@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import styles from "./success.module.scss";
+import { AlignedContainer } from "../../components/ui/styledComponents";
 
 export default function SuccessPage(props) {
   let timer;
@@ -15,8 +16,10 @@ export default function SuccessPage(props) {
     return clearTimeout(timer);
   }, []);
   return (
-    <div className={styles.sPage}>
-      <h3>Child has been edited successfully </h3>
-    </div>
+    <AlignedContainer>
+      <div className={styles.sPage}>
+        <h3>Child has been edited successfully </h3>
+      </div>
+    </AlignedContainer>
   );
 }

@@ -5,7 +5,6 @@ const BirthdayField = () => {
   return (
     <InputBox>
       <label className="details">Birthday</label>
-      <br />
       <input type="date" name="birthday" placeholder="Birthday" required />
     </InputBox>
   );

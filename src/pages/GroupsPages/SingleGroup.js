@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import SingleGroupEdit from "./SingleGroupEdit";
 import styles from "./groups.module.scss";
 import { Link } from "react-router-dom";
+import { AlignedContainer } from "../../components/ui/styledComponents";
 
 export default function SingleGroup(props) {
   const [showForm, setShowForm] = useState(false);
@@ -12,7 +13,7 @@ export default function SingleGroup(props) {
 
   const group = props.location.state.group;
   return (
-    <div>
+    <AlignedContainer>
       <div className={styles.scontainer} key={group._id}>
         <>
           {showForm && (
@@ -69,6 +70,6 @@ export default function SingleGroup(props) {
           Go Back
         </button>
       </Link>
-    </div>
+    </AlignedContainer>
   );
 }

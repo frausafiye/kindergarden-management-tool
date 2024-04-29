@@ -3,6 +3,7 @@ import { MyContext } from "../../Container";
 import axios from "axios";
 import UserCard from "../../components/Cards/UserCard";
 import styles from "./Teachers.module.scss";
+import { AlignedContainer } from "../../components/ui/styledComponents";
 
 export default function Teachers() {
   const { kg, authCheckHandler } = useContext(MyContext);
@@ -70,7 +71,7 @@ export default function Teachers() {
   };
 
   return (
-    <div>
+    <AlignedContainer>
       <div className={styles.btn}>
         <button className="next" onClick={generateCodeHandler}>
           Generate Code
@@ -107,6 +108,6 @@ export default function Teachers() {
             );
           })}
       </div>
-    </div>
+    </AlignedContainer>
   );
 }

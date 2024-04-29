@@ -23,7 +23,6 @@ import EditProfile from "./pages/EditProfile/EditProfile";
 import TeacherDashboard from "./pages/Dashboards/TeacherDashboard/TeacherDashboard";
 import ManagerDashboard from "./pages/Dashboards/ManagerDashboard/ManagerDashboard";
 import Teachers from "./pages/Teachers/Teachers";
-import Calendar from "./components/Cards/appCards/Calendar/Calendar";
 import Container from "./Container";
 
 import Attendance from "./pages/Attendance/Attendance";
@@ -51,13 +50,10 @@ function App() {
           <Route path="/cregister" component={ChildRegister} />
           <Route path="/editchild" component={ChildEdit} />
           <Route path="/login" component={Login} />
-          {/* <Route path="/mpage" component={Mpage} /> */}
-          {/* <Route path="/tpage" component={Tpage} /> */}
           <Route path="/mpage" component={ManagerDashboard} />
           <Route path="/teachers" component={Teachers} />
           <Route path="/tpage" component={TeacherDashboard} />
           <Route path="/attendance" component={Attendance} />
-          <Route path="/calendar" component={Calendar} />
           <Route path="/groups" component={AllGroups} />
           <Route path="/editgroup" component={SingleGroupEdit} />
           <Route path="/group" component={SingleGroup} />
