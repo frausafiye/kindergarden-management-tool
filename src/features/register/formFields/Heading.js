@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./ChildStyle/ChildRegister.module.scss";
+import styles from "../styles/ChildStyle/ChildRegister.module.scss";
 
 const Heading = ({ text }) => {
   return (

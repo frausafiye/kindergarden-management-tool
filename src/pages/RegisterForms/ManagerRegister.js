@@ -1,4 +1,4 @@
-import StaffRegister from "../../components/Register/formFields/StaffRegisterForm";
+import StaffRegister from "../../features/register/formFields/StaffRegisterForm";
 import { AlignedContainer } from "../../components/ui/styledComponents";
 
 const ManagerRegister = (props) => {

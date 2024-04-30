@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import styles from "./registerForm.module.scss";
+import styles from "../styles/registerForm.module.scss";
 import { sendData, submitForm } from "../../../lib/registerLogic";
 import { InputBox } from "./InputBox";
 import {

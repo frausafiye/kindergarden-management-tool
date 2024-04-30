@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { Link, useHistory } from "react-router-dom";
 import logo from "../../assets/logo.svg";
-import styles from "./navbar.module.scss";
+import styles from "./styles/navbar.module.scss";
 import { useContext } from "react";
 import { MyContext } from "../../Container";
 

@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../features/Dashboards/styles/ManagerDashboard.module.scss";
+import styles from "../../features/dashboards/styles/ManagerDashboard.module.scss";
 import Calendar from "../../features/calendar/components/Calendar";
 import TeachersCard from "../../components/Cards/TeachersCard";
 import ChildrenCard from "../../components/Cards/ChildrenCard";

@@ -1,9 +1,9 @@
 import React from "react";
-import styles from "./styles/children.module.scss";
-import kid1 from "../../assets/kid_avatar.svg";
-import kid2 from "../../assets/kid_avatar2.svg";
-import kid3 from "../../assets/kid_avatar3.svg";
-import kid4 from "../../assets/kid_avatar4.svg";
+import styles from "../styles/children.module.scss";
+import kid1 from "../../../assets/kid_avatar.svg";
+import kid2 from "../../../assets/kid_avatar2.svg";
+import kid3 from "../../../assets/kid_avatar3.svg";
+import kid4 from "../../../assets/kid_avatar4.svg";
 export default function ChildInfo({ child, imageNum }) {
   const {
     firstName,

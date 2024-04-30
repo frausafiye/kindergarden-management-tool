@@ -1,4 +1,4 @@
-import ChildRegisterForm from "../../components/Register/formFields/ChildRegisterForm";
+import ChildRegisterForm from "../../features/register/formFields/ChildRegisterForm";
 import { AlignedContainer } from "../../components/ui/styledComponents";
 
 const ChildRegister = () => {

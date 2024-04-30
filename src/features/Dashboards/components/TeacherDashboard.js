@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import styles from "./TeacherDashboard.module.scss";
-import Calendar from "../../../components/Cards/appCards/Calendar/Calendar";
+import styles from "../styles/TeacherDashboard.module.scss";
+import Calendar from "../../calendar/components/Calendar";
 import GroupCard from "../../../components/Cards/GroupCard";
 import ToDo from "../../todo/components/ToDo";
 import UserInfoSidebar from "../../../layouts/Sidebar/UserInfoSidebar";

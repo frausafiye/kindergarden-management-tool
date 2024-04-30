@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
-import styles from "./styles/children.module.scss";
+import styles from "../styles/children.module.scss";
 
 export default function ChildGroupEdit({ child, groups }) {
   const [selectedGroup, setSelectedGroup] = useState(null);

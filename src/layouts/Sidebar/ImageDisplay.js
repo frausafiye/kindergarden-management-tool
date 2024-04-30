@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
-import Mstyles from "../../features/Dashboards/styles/ManagerDashboard.module.scss";
-import Tstyles from "../../features/Dashboards/styles/TeacherDashboard.module.scss";
+import Mstyles from "../../features/dashboards/styles/ManagerDashboard.module.scss";
+import Tstyles from "../../features/dashboards/styles/TeacherDashboard.module.scss";
 const ImageDisplay = (props) => {
   const [validImages, setValidImages] = useState([]);
   //   const [invalidImages, setInvalidImages] = useState([]);

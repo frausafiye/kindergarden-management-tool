@@ -2,8 +2,8 @@ import axios from "axios";
 import React, { useContext, useEffect, useRef, useState } from "react";
 import { MyContext } from "../../Container";
 import publicUserImg from "../../assets/user-public-image.png";
-import Mstyles from "../../features//Dashboards/styles/ManagerDashboard.module.scss";
-import Tstyles from "../../features//Dashboards/styles/TeacherDashboard.module.scss";
+import Mstyles from "../../features/dashboards/styles/ManagerDashboard.module.scss";
+import Tstyles from "../../features/dashboards/styles/TeacherDashboard.module.scss";
 import ImageDisplay from "./ImageDisplay";
 
 export default function UserImage(props) {

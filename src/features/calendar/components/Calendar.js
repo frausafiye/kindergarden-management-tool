@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useContext } from "react";
-import styles from "../../Dashboards/styles/ManagerDashboard.module.scss";
-import Tstyles from "../../Dashboards/styles/TeacherDashboard.module.scss";
+import styles from "../../dashboards/styles/ManagerDashboard.module.scss";
+import Tstyles from "../../dashboards/styles/TeacherDashboard.module.scss";
 import {
   format,
   startOfMonth,

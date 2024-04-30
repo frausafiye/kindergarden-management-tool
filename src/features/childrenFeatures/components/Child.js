@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
-import { MyContext } from "../../Container";
-import styles from "./styles/children.module.scss";
+import { MyContext } from "../../../Container";
+import styles from "../styles/children.module.scss";
 import axios from "axios";
 import ChildInfo from "./ChildInfo";
 import ChildGroupEdit from "./ChildGroupEdit";

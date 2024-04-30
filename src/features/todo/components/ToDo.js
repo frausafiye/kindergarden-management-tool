@@ -4,8 +4,8 @@ import ToDosContainer from "./ToDosContainer";
 import ToDonesContainer from "./ToDonesContainer";
 import { MyContext } from "../../../Container";
 import "../styles/Todo.scss";
-import styles from "../../Dashboards/styles/ManagerDashboard.module.scss";
-import Tstyles from "../../Dashboards/styles/TeacherDashboard.module.scss";
+import styles from "../../dashboards/styles/ManagerDashboard.module.scss";
+import Tstyles from "../../dashboards/styles/TeacherDashboard.module.scss";
 import axios from "axios";
 
 export default function Todo() {

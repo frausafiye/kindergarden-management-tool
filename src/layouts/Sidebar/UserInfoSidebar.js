@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { useHistory, useLocation } from "react-router-dom";
-import Mstyles from "../../features/Dashboards/styles/ManagerDashboard.module.scss";
-import Tstyles from "../../features/Dashboards/styles/TeacherDashboard.module.scss";
+import Mstyles from "../../features/dashboards/styles/ManagerDashboard.module.scss";
+import Tstyles from "../../features/dashboards/styles/TeacherDashboard.module.scss";
 import { MyContext } from "../../Container";
 import UserImage from "./UserImage";
 

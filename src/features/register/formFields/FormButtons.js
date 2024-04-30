@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import styles from "./registerForm.module.scss";
+import styles from "../styles/registerForm.module.scss";
 const FormButtons = ({ type }) => {
   return (
     <div className={styles.btnContainer}>
