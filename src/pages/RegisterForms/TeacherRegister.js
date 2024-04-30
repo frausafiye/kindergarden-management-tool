@@ -1,4 +1,4 @@
-import StaffRegister from "../../components/Register/form/StaffRegisterForm";
+import StaffRegister from "../../components/Register/formFields/StaffRegisterForm";
 import { AlignedContainer } from "../../components/ui/styledComponents";
 
 const TeacherRegister = () => {

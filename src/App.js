@@ -1,11 +1,11 @@
 import React from "react";
 import { Route, Switch, withRouter } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-// Basics
+// Layout
 import Home from "./pages/Home/Home";
-import Navbar from "./components/Navbar/Navbar";
-import Footer from "./components/Footer/index";
-import "./globalCSS/app.scss";
+import Navbar from "./layouts/Navbar/Navbar";
+import Footer from "./layouts/Footer/index";
+import "./assets/globalCSS/app.scss";
 
 // Login & Error
 import Login from "./pages/Login/Login";
@@ -20,12 +20,12 @@ import ChildRegister from "./pages/RegisterForms/ChildRegister";
 
 // Dashboard
 import EditProfile from "./pages/EditProfile/EditProfile";
-import TeacherDashboard from "./pages/Dashboards/TeacherDashboard/TeacherDashboard";
-import ManagerDashboard from "./pages/Dashboards/ManagerDashboard/ManagerDashboard";
+import TeacherDashboard from "./pages/Dashboards/TeacherDashboard";
+import ManagerDashboard from "./pages/Dashboards/ManagerDashboard";
 import Teachers from "./pages/Teachers/Teachers";
 import Container from "./Container";
 
-import Attendance from "./pages/Attendance/Attendance";
+import Attendance from "./features/attendance/components/Attendance";
 import AllGroups from "./pages/GroupsPages/AllGroups";
 import SingleGroupEdit from "./pages/GroupsPages/SingleGroupEdit";
 import SingleGroup from "./pages/GroupsPages/SingleGroup";

@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
-import styles from "./Login.module.scss";
+import styles from "./styles/Login.module.scss";
 import axios from "axios";
 import { MyContext } from "../../Container";
 import { useHistory } from "react-router-dom/cjs/react-router-dom";

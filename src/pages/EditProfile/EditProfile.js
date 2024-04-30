@@ -1,9 +1,9 @@
 import React, { useState, useContext, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import styles from "./Editprofile.module.scss";
+import styles from "./styles/Editprofile.module.scss";
 import { MyContext } from "../../Container";
-import { submitForm } from "../../logic/registerLogic";
+import { submitForm } from "../../lib/registerLogic";
 import { useHistory } from "react-router-dom/cjs/react-router-dom";
 import { AlignedContainer } from "../../components/ui/styledComponents";
 
@@ -81,52 +81,51 @@ export default function EditProfile(props) {
   return (
     <AlignedContainer>
       <div className={styles.regForm}>
-        {showSuccess && ( //style this one!!!!
+        {showSuccess && (
           <div className={styles.updateBox}>
             <h3>Your profile has been succeessfully updated </h3>
           </div>
         )}
         {/* form for changing password: */}
-        {showPasswordForm &&
-          !showSuccess && ( //style!!!
-            <form
-              className={styles.formContainer}
-              onSubmit={(e) => changePasswordHandler(e)}
-            >
+        {showPasswordForm && !showSuccess && (
+          <form
+            className={styles.formContainer}
+            onSubmit={(e) => changePasswordHandler(e)}
+          >
+            <div>
               <div>
-                <div>
-                  <label className="details">Your current password: </label>
-                  <br />
-                  <input
-                    type="password"
-                    name="currentPassword"
-                    placeholder="current password"
-                  />
-                </div>
-                <div>
-                  <label className="details">Your new password: </label>
-                  <br />
-                  <input
-                    type="password"
-                    name="newPassword"
-                    placeholder="new password"
-                  />
-                </div>
+                <label className="details">Your current password: </label>
                 <br />
-                <div className={styles.btnContainer}>
-                  <button
-                    className="cancel"
-                    onClick={() => setShowPasswordForm(false)}
-                  >
-                    Cancel
-                  </button>
-                  <button type="submit" value="Register" className="att">
-                    Submit
-                  </button>
-                </div>
+                <input
+                  type="password"
+                  name="currentPassword"
+                  placeholder="current password"
+                />
               </div>
-            </form>
-          )}
+              <div>
+                <label className="details">Your new password: </label>
+                <br />
+                <input
+                  type="password"
+                  name="newPassword"
+                  placeholder="new password"
+                />
+              </div>
+              <br />
+              <div className={styles.btnContainer}>
+                <button
+                  className="cancel"
+                  onClick={() => setShowPasswordForm(false)}
+                >
+                  Cancel
+                </button>
+                <button type="submit" value="Register" className="att">
+                  Submit
+                </button>
+              </div>
+            </div>
+          </form>
+        )}
 
         {/* edit form without password: */}
         {!showSuccess && !showPasswordForm && (

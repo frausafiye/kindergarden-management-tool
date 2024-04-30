@@ -5,8 +5,8 @@ import {
   faCheckCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import { faCalendarMinus } from "@fortawesome/free-regular-svg-icons";
-import kids from "../../images/kids.svg";
-import styles from "./Home.module.scss";
+import kids from "../../assets/kids.svg";
+import styles from "./styles/Home.module.scss";
 import { AlignedContainer } from "../../components/ui/styledComponents";
 
 export default function Home() {

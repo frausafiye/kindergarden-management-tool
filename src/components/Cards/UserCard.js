@@ -1,11 +1,11 @@
 import React, { useState, useContext } from "react";
 import axios from "axios";
-import user1 from "../../images/user1.png";
-import user2 from "../../images/user2.png";
-import user3 from "../../images/user3.png";
-import user4 from "../../images/user4.png";
+import user1 from "../../assets/user1.png";
+import user2 from "../../assets/user2.png";
+import user3 from "../../assets/user3.png";
+import user4 from "../../assets/user4.png";
 import { MyContext } from "../../Container";
-import styles from "../../pages/Teachers/Teachers.module.scss";
+import styles from "../../pages/Teachers/styles/Teachers.module.scss";
 
 const images = [user1, user2, user3, user4];
 

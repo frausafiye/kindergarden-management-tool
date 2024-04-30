@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
-import styles from "./children.module.scss";
+import styles from "../../features/childrenFeatures/styles/children.module.scss";
 import { MyContext } from "../../Container";
-import Child from "./Child";
+import Child from "../../features/childrenFeatures/Child";
 import { AlignedContainer } from "../../components/ui/styledComponents";
 
 export default function AllChildren(props) {
@@ -16,9 +16,9 @@ export default function AllChildren(props) {
       props.location.state &&
       props.location.state.group
     ) {
-      url = `${process.env.REACT_APP_BASE_URL}/child//getChildrenFromGroup/${props.location.state.group}`;
+      url = `${process.env.REACT_APP_BASE_URL}/child/getChildrenFromGroup/${props.location.state.group}`;
     } else if (user.role === "Teacher") {
-      url = `${process.env.REACT_APP_BASE_URL}/child//getChildrenFromGroup/${user.group._id}`;
+      url = `${process.env.REACT_APP_BASE_URL}/child/getChildrenFromGroup/${user.group._id}`;
     } else {
       url = `${process.env.REACT_APP_BASE_URL}/child/getAllChildren/${user.kg}`;
     }

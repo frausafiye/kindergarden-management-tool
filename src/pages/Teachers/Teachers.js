@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { MyContext } from "../../Container";
 import axios from "axios";
 import UserCard from "../../components/Cards/UserCard";
-import styles from "./Teachers.module.scss";
+import styles from "./styles/Teachers.module.scss";
 import { AlignedContainer } from "../../components/ui/styledComponents";
 
 export default function Teachers() {

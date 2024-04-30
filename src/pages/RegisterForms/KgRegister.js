@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import ManagerRegister from "./ManagerRegister";
-import styles from "../../components/Register/form/registerForm.module.scss";
-import { submitForm } from "../../logic/registerLogic";
+import styles from "../../components/Register/style/registerForm.module.scss";
+import { submitForm } from "../../lib/registerLogic";
 import {
   AddressFields,
   ContactFields,
-} from "../../components/Register/form/index";
-import { InputBox } from "../../components/Register/ui/InputBox";
+} from "../../components/Register/formFields/index";
+import { InputBox } from "../../components/Register/formFields/InputBox";
 import { AlignedContainer } from "../../components/ui/styledComponents";
 
 export default function KgRegister() {

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import styles from "./success.module.scss";
+import styles from "../../features/childrenFeatures/styles/success.module.scss";
 import { AlignedContainer } from "../../components/ui/styledComponents";
 
 export default function SuccessPage(props) {

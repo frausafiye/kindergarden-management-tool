@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { MyContext } from "../../Container";
-import styles from "../../pages/Dashboards/ManagerDashboard/ManagerDashboard.module.scss";
+import styles from "../../features/Dashboards/styles/ManagerDashboard.module.scss";
 
 export default function ChildrenCard() {
   const [children, setChildren] = useState([]);

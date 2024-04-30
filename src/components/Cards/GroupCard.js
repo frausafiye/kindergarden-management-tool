@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { MyContext } from "../../Container";
-import styles from "../../pages/Dashboards/TeacherDashboard/TeacherDashboard.module.scss";
+import styles from "../../features/Dashboards/styles/TeacherDashboard.module.scss";
 export default function GroupCard() {
   const { user } = useContext(MyContext);
   const { groupName, description, ageGroup, room } = user.group;
