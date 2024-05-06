@@ -26,7 +26,7 @@ export const GroupInfo = ({ group, handleEdit }) => {
         <p className={styles.info}>Group size:</p>
         <p className={styles.info}>{group.children.length}</p>
         <Link to="/children">
-          <button type="submit" value="view" className="view">
+          <button type="submit" value="view" className="view btn">
             view children
           </button>
         </Link>
@@ -38,7 +38,7 @@ export const GroupInfo = ({ group, handleEdit }) => {
       <button
         type="submit"
         value="edit"
-        className="edit"
+        className="edit btn"
         onClick={() => handleEdit(group)}
       >
         Edit

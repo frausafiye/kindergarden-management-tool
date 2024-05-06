@@ -232,7 +232,11 @@ export default function ChildEdit(props) {
             </div>
 
             <div className={styles.btnContainer}>
-              <button type="submit" value="Edit" className={styles.submitBtn}>
+              <button
+                type="submit btn"
+                value="Edit"
+                className={styles.submitBtn}
+              >
                 Submit
               </button>
             </div>

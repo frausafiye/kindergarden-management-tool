@@ -25,7 +25,7 @@ export default function SingleGroup(props) {
         </>
       </div>
       <Link to="/groups">
-        <button type="submit" value="back" className="back">
+        <button type="submit" value="back" className="back btn">
           Go Back
         </button>
       </Link>

@@ -14,7 +14,7 @@ export default function GroupCard() {
     });
   };
   return (
-    <div className={styles.tGroup}>
+    <div className={styles.group}>
       <div className={styles.gHead}>
         <h2>Group:</h2>
         <h3 className={styles.gHeader}>{groupName}</h3>
@@ -24,11 +24,11 @@ export default function GroupCard() {
       {room && <li>Room: {room}</li>}
       <br />
       <br />
-      <button onClick={() => handleView()} className="add">
+      <button onClick={() => handleView()} className="add btn">
         View Group
       </button>
       <Link to="/attendance">
-        <button className="view">Check Attendance</button>
+        <button className="view btn">Check Attendance</button>
       </Link>
     </div>
   );

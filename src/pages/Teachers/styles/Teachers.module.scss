@@ -8,7 +8,7 @@
   padding: 0.4rem;
 }
 
-.btn {
+.btnContainer {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-end;
@@ -64,7 +64,7 @@
   padding-top: 0.2rem;
   line-height: 2rem;
 }
-.btn {
+.btnContainer {
   margin: 0 auto;
   margin-bottom: 0.7rem;
 }

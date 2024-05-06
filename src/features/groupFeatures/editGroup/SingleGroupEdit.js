@@ -85,7 +85,7 @@ export default function SingleGroupEdit(props) {
       <button
         type="submit"
         value="delete"
-        className="next"
+        className="next btn"
         style={{
           width: "5rem",
           margin: "0 auto",

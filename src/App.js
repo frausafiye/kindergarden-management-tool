@@ -19,7 +19,7 @@ import ManagerRegister from "./pages/RegisterForms/ManagerRegister";
 import ChildRegister from "./pages/RegisterForms/ChildRegister";
 
 // Dashboard
-import EditProfile from "./pages/EditProfile/EditProfile";
+import EditProfile from "./pages/EditProfile/EditProfile2";
 import TeacherDashboard from "./pages/Dashboards/TeacherDashboard";
 import ManagerDashboard from "./pages/Dashboards/ManagerDashboard";
 import Teachers from "./pages/Teachers/Teachers";

@@ -28,10 +28,10 @@ export default function Navbar() {
       {isLogin ? (
         <div className={styles.navbtn}>
           <Link to="/login">
-            <button className="submit">My Profile</button>
+            <button className="submit btn">My Profile</button>
           </Link>
           <div className={styles.navbtn}>
-            <button onClick={logoutHandle} className="login">
+            <button onClick={logoutHandle} className="login btn">
               Logout
             </button>
           </div>
@@ -39,10 +39,10 @@ export default function Navbar() {
       ) : (
         <div className={styles.navbtn}>
           <Link to="/register">
-            <button className="submit">Register</button>
+            <button className="register btn">Register</button>
           </Link>
           <Link to="/login">
-            <button className="login">Login</button>
+            <button className="login btn">Login</button>
           </Link>
         </div>
       )}

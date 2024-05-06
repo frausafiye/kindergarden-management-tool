@@ -31,18 +31,18 @@ export default function GroupsCard() {
     getAllGroups();
   }, []);
   return (
-    <div className={styles.mGroup}>
+    <div className={styles.group}>
       <h3>Groups</h3>
       <p>Find all the groups information:</p>
       <p>how many children per group, ages, weekely plans and more!</p>
       <p>Total: {groups.length}</p>
       <Link to="/addgroup">
-        <button type="submit" value="add" className="add">
+        <button type="submit" value="add" className="add btn">
           Add
         </button>
       </Link>
       <Link to="/groups">
-        <button type="submit" value="view" className="view">
+        <button type="submit" value="view" className="view btn">
           View
         </button>
       </Link>

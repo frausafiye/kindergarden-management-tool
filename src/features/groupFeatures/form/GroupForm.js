@@ -39,7 +39,7 @@ export const GroupForm = ({
           onChangeFunction={onChangeFunction}
         />
       </div>
-      <div className={styles.btn}>
+      <div className={styles.btnContainer}>
         <FormButtons actionType={actionType} />
         {message.status && <StatusMessage message={message} />}
       </div>

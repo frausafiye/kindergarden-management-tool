@@ -5,14 +5,14 @@ export const FormButtons = ({ actionType }) => {
   return (
     <>
       <Link to="/groups">
-        <button type="button" value="Cancel" className="cancel">
+        <button type="button" value="Cancel" className="cancel btn">
           Cancel
         </button>
       </Link>
       <button
         type="submit"
         value={actionType === "add" ? "Add" : "Edit"}
-        className={actionType === "add" ? "submit" : "att"}
+        className={actionType === "add btn" ? "submit" : "att btn"}
       >
         {actionType === "add" ? "Add" : "Edit"}
       </button>

@@ -80,7 +80,7 @@ export default function UserImage(props) {
 
   return (
     <div
-      className={props.page === "mpage" ? Mstyles.mImg : Tstyles.tImg}
+      className={props.page === "mpage" ? Mstyles.img : Tstyles.img}
       onClick={onButtonClick}
     >
       {imageData ? (

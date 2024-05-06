@@ -114,12 +114,12 @@ export default function EditProfile(props) {
               <br />
               <div className={styles.btnContainer}>
                 <button
-                  className="cancel"
+                  className="cancel btn"
                   onClick={() => setShowPasswordForm(false)}
                 >
                   Cancel
                 </button>
-                <button type="submit" value="Register" className="att">
+                <button type="submit" value="Register" className="att btn">
                   Submit
                 </button>
               </div>
@@ -231,16 +231,16 @@ export default function EditProfile(props) {
                 <br />
                 <div className={styles.editBtns}>
                   <Link to={user.role == "Manager" ? "/mpage" : "/tpage"}>
-                    <button className="cancel">Cancel</button>
+                    <button className="cancel btn">Cancel</button>
                   </Link>
-                  <button type="submit" value="Register" className="att">
+                  <button type="submit" value="Register" className="att btn">
                     Submit
                   </button>
                   {!showPasswordForm && !showSuccess && (
                     <button
                       type="submit"
                       value="Register"
-                      className="att"
+                      className="att btn"
                       onClick={() => setShowPasswordForm(true)}
                     >
                       Change Password

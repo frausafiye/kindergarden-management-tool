@@ -10,10 +10,10 @@ export default function Register() {
       <br />
       <div className="btnform">
         <Link to="/kgregister">
-          <button className="att">Register a Kindergarten</button>
+          <button className="att btn">Register a Kindergarten</button>
         </Link>
         <Link to="/tregister">
-          <button className="att">Register as Teacher</button>
+          <button className="att btn">Register as Teacher</button>
         </Link>
       </div>
       {/* </div> */}

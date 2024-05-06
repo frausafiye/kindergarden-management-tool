@@ -41,7 +41,7 @@ export default function Child(props) {
         {user.role === "Manager" && (
           <button
             value="edit"
-            className="fixedit"
+            className="fixedit btn"
             onClick={() => props.handleEdit(child)}
           >
             Edit
@@ -50,7 +50,7 @@ export default function Child(props) {
         {user.role === "Manager" && (
           <button
             value="edit"
-            className="add"
+            className="add btn"
             onClick={() => handleEditGroup()}
           >
             Edit Group

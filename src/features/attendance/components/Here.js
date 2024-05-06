@@ -23,7 +23,10 @@ export default function Here({ hereChildren, handleAttendance }) {
                     />{" "}
                     Not Here
                   </label>
-                  <button type="submit"> Submit</button>
+                  <button type="submit btn" className="btn submit">
+                    {" "}
+                    Submit
+                  </button>
                 </form>
               </div>
             </div>

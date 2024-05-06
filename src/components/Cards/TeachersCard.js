@@ -30,7 +30,7 @@ export default function TeachersCard() {
     getAllTeachers();
   }, []);
   return (
-    <div className={styles.mTeachers}>
+    <div className={styles.teachers}>
       <h3>Teachers</h3>
       <p>Find all the teacher information:</p>
       <p>
@@ -39,7 +39,7 @@ export default function TeachersCard() {
       </p>
       <p>Total: {teachers.length}</p>
       <Link to="/teachers">
-        <button type="submit" value="view" className="view">
+        <button type="submit" value="view" className="view btn">
           View
         </button>
       </Link>

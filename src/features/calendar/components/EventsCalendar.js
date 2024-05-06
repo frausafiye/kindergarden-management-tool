@@ -61,9 +61,8 @@ export default function EventsCalendar() {
           <div key={i} className={styles.container}>
             <p>
               <span className={styles.date}>
-                {" "}
-                {format(new Date(event.startDate), dateFormat)} -{" "}
-                {format(new Date(event.endDate), dateFormat)}{" "}
+                {format(new Date(event.startDate), dateFormat)} -
+                {format(new Date(event.endDate), dateFormat)}
               </span>{" "}
               : {event.name}
             </p>

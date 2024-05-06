@@ -87,18 +87,18 @@ export default function Login(props) {
             </div>
             <br />
             <div className={styles.btnContainer}>
-              <button type="submit" value="Login" className="next">
+              <button type="submit" value="Login" className="next btn">
                 Login
               </button>
               <Link to="/">
-                <button className="cancel">Cancel</button>
+                <button className="cancel btn">Cancel</button>
               </Link>
             </div>
             <div className={styles.btnContainer}>
               <button
                 type="submit"
                 value="Try it"
-                className="att"
+                className="submit btn"
                 id="explore"
                 onClick={() => {
                   console.log(process.env.REACT_APP_EXPLORE_ACCOUNT_EMAIL);

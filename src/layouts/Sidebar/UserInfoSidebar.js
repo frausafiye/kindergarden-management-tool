@@ -5,7 +5,7 @@ import Tstyles from "../../features/dashboards/styles/TeacherDashboard.module.sc
 import { MyContext } from "../../Container";
 import UserImage from "./UserImage";
 
-export default function UserInfoSidebar(props) {
+export default function UserInfoSidebar() {
   const { user } = useContext(MyContext);
   const { firstName, lastName, email, phoneNumber, group } = user;
   const location = useLocation();
@@ -17,7 +17,7 @@ export default function UserInfoSidebar(props) {
   };
 
   return (
-    <div className={page === "mpage" ? Mstyles.mInfo : Tstyles.tInfo}>
+    <div className={page === "mpage" ? Mstyles.info : Tstyles.info}>
       <UserImage page={page} />
       <div>
         <p>
@@ -29,7 +29,7 @@ export default function UserInfoSidebar(props) {
         <button
           type="submit"
           value="edit"
-          className="edit"
+          className="edit btn"
           onClick={() => handleEdit()}
         >
           Edit Info

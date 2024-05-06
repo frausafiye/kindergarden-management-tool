@@ -23,7 +23,10 @@ export default function NotHere({ notHereChildren, handleAttendance }) {
                     />{" "}
                     Here
                   </label>
-                  <button type="submit"> Submit </button>
+                  <button type="submit" className="btn submit">
+                    {" "}
+                    Submit{" "}
+                  </button>
                 </form>
               </div>
             </div>

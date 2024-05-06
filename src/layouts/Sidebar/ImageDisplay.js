@@ -37,7 +37,7 @@ const ImageDisplay = (props) => {
   }, [props.imageData]);
 
   return (
-    <div className={props.page === "mpage" ? Mstyles.mImg : Tstyles.tImg}>
+    <div className={props.page === "mpage" ? Mstyles.img : Tstyles.img}>
       {validImages.map((image, index) => (
         <img
           key={index}

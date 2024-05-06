@@ -85,7 +85,7 @@ export default function CalendarForm(props) {
           className="text-event"
           onChange={grabValue}
         />
-        <button type="submit" value="Submit" className="submit event">
+        <button type="submit" value="Submit" className="submit btn event">
           Submit
         </button>
         {message.status && (

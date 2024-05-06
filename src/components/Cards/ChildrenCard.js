@@ -32,7 +32,7 @@ export default function ChildrenCard() {
     getAllChildren();
   }, []);
   return (
-    <div className={styles.mChildren}>
+    <div className={styles.children}>
       <h3>Childrens</h3>
       <p>Find all the information of the children:</p>
       <p>
@@ -41,12 +41,12 @@ export default function ChildrenCard() {
       </p>
       <p>Total: {children.length}</p>
       <Link to="/cregister">
-        <button type="submit" value="add" className="add">
+        <button type="submit" value="add" className="add btn">
           Add
         </button>
       </Link>
       <Link to="/children">
-        <button type="submit" value="view" className="view">
+        <button type="submit" value="view" className="view btn">
           View
         </button>
       </Link>

@@ -70,7 +70,7 @@ export default function ChildGroupEdit({ child, groups }) {
         <button
           onClick={() => changeGroup(child._id)}
           disabled={selectedGroup ? false : true}
-          className="add"
+          className="add btn"
         >
           save
         </button>

@@ -112,14 +112,14 @@ export default function UserCard(props) {
           {group ? `Group: ${group.groupName}` : "Please assign a group"}
         </div>
       </div>
-      <div className={styles.btn}>
+      <div className={styles.btnContainer}>
         <button
-          className="edit2"
+          className="edit2 btn"
           onClick={!groups ? () => getAllGroups() : () => setGroups(null)}
         >
           edit group
         </button>
-        <button className="edit3" onClick={() => setShowRoles(!showRoles)}>
+        <button className="edit3 btn" onClick={() => setShowRoles(!showRoles)}>
           edit role
         </button>
       </div>
@@ -155,7 +155,7 @@ export default function UserCard(props) {
           </div>
           <button
             type="submit"
-            className="add"
+            className="add btn"
             style={{ display: "inline", margin: "0 auto" }}
             onClick={() => changeRole(_id)}
             disabled={selectedRole ? false : true}
@@ -211,7 +211,7 @@ export default function UserCard(props) {
           </div>
           <button
             type="submit"
-            className="add"
+            className="add btn"
             style={{ display: "block", margin: "0 auto" }}
             onClick={() => changeGroup(_id)}
             disabled={selectedGroup ? false : true}

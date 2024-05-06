@@ -69,7 +69,7 @@ export default function AllGroups(props) {
                 <button
                   type="submit"
                   value="edit"
-                  className="fixedit"
+                  className="fixedit btn"
                   onClick={() => handleEdit(group)}
                 >
                   Edit
@@ -77,7 +77,7 @@ export default function AllGroups(props) {
                 <button
                   type="submit"
                   value="view"
-                  className="view"
+                  className="view btn"
                   onClick={() => viewChildrenHandler(group._id)}
                 >
                   view children

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { MyContext } from "../../Container";
 import axios from "axios";
-import UserCard from "../../components/Cards/UserCard";
+import UserCard from "../../components/cards/UserCard";
 import styles from "./styles/Teachers.module.scss";
 import { AlignedContainer } from "../../components/ui/styledComponents";
 
@@ -72,8 +72,8 @@ export default function Teachers() {
 
   return (
     <AlignedContainer>
-      <div className={styles.btn}>
-        <button className="next" onClick={generateCodeHandler}>
+      <div className={styles.btnContainer}>
+        <button className="next btn" onClick={generateCodeHandler}>
           Generate Code
         </button>
         {verificationCode && <p>VerificationCode: {verificationCode}</p>}

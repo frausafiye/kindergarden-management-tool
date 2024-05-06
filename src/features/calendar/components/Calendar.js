@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from "react";
-import styles from "../../dashboards/styles/ManagerDashboard.module.scss";
+import Mstyles from "../../dashboards/styles/ManagerDashboard.module.scss";
 import Tstyles from "../../dashboards/styles/TeacherDashboard.module.scss";
 import {
   format,
@@ -150,7 +150,7 @@ export default function Calendar() {
   };
 
   return (
-    <div className={page === "mpage" ? styles.calendar : Tstyles.calendar}>
+    <div className={page === "mpage" ? Mstyles.calendar : Tstyles.calendar}>
       <div className="calendar">
         {showForm && (
           <div>

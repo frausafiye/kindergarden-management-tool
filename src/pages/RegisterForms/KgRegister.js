@@ -47,11 +47,11 @@ export default function KgRegister() {
                 <AddressFields />
               </div>
               <div className={styles.btnContainer}>
-                <button type="submit" value="Next" className="next">
+                <button type="submit" value="Next" className="next btn">
                   Next
                 </button>
                 <Link to="/">
-                  <button className="cancel">Cancel</button>
+                  <button className="cancel btn">Cancel</button>
                 </Link>
               </div>
             </div>

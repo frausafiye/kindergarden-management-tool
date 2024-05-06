@@ -70,7 +70,7 @@ export default function Todo() {
   };
 
   return (
-    <div className={page === "mpage" ? styles.mTodo : Tstyles.tTodo}>
+    <div className={page === "mpage" ? styles.todo : Tstyles.todo}>
       <div className="app">
         <ToDosContainer
           toDos={toDos}
