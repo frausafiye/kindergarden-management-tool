@@ -1,6 +1,7 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useContext } from "react";
 import styles from "../styles/ChildStyle/ChildRegister.module.scss";
-import { sendData, submitForm } from "../../../lib/registerLogic";
+import useSubmitFormData from "../../hooks/useSubmitFormData";
+import adjustFormData from "../../../hooks/adjustFormData";
 import { MyContext } from "../../../Container";
 import {
   AddressFields,
@@ -31,30 +32,42 @@ export default function ChildRegister(props) {
     status: null,
   });
 
-  useEffect(() => {
-    if (formData.child) {
-      sendData("child registration", {
-        ...formData.child,
-        kg: kg._id,
-        attendance: [
-          {
-            attendanceStatus: "notHere",
-            date: new Date().toISOString().split("T")[0],
-            // date: "yyyy-mm-dd"
-          },
-        ],
-      });
-    } else {
-      return;
-    }
-  }, [formData]);
+  // Custom hook to handle form submission
+  const {
+    isLoading,
+    error,
+    handleSubmit: postRegisterForm,
+  } = useSubmitFormData("child registration", {
+    ...formData.child,
+    kg: kg._id,
+    attendance: [
+      {
+        attendanceStatus: "notHere",
+        date: new Date().toISOString().split("T")[0],
+        // date: "yyyy-mm-dd"
+      },
+    ],
+  });
 
-  const submitChildForm = (e) => {
+  const submitChildForm = async (e) => {
     e.preventDefault();
-    let childObj = submitForm(e);
-    setFormData({ child: childObj });
-    handleMessage(true, "Thank you! Child added.");
-    console.log(childObj);
+    const adjustedFormData = adjustFormData(e);
+    console.log(adjustedFormData);
+    // const { data, loading, error } = useSubmitFormData("child registration", {
+    //   ...formData.child,
+    //   kg: kg._id,
+    //   attendance: [
+    //     {
+    //       attendanceStatus: "notHere",
+    //       date: new Date().toISOString().split("T")[0],
+    //       // date: "yyyy-mm-dd"
+    //     },
+    //   ],
+    // });
+    await postRegisterForm(adjustedFormData);
+    if ((!error, !isLoading)) {
+      handleMessage(true, "Thank you! Child added.");
+    }
   };
 
   let timer;
@@ -131,3 +144,8 @@ export default function ChildRegister(props) {
     </div>
   );
 }
+
+// <button type="submit" disabled={isLoading}>
+//     {isLoading ? 'Submitting...' : 'Submit'}
+// </button>
+// {error && <p style={{ color: 'red' }}>{error}</p>}

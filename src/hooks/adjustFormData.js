@@ -1,6 +1,4 @@
-import axios from "axios";
-
-const submitForm = (e) => {
+export default function adjustFormData(e) {
   const formData = new FormData(e.target);
   let obj = {
     address: {},
@@ -45,49 +43,4 @@ const submitForm = (e) => {
     }
   }
   return obj;
-};
-
-const sendData = (type, payload) => {
-  let url = "";
-
-  // "kg registration"
-  if (type === "kg registration") {
-    url = `${process.env.REACT_APP_BASE_URL}/kg/register`;
-  }
-
-  // "manager registration"
-  else if (type === "manager registration") {
-    url = `${process.env.REACT_APP_BASE_URL}/users/managers`;
-  }
-
-  // "child registration"
-  else if (type === "child registration") {
-    url = `${process.env.REACT_APP_BASE_URL}/child/addChild`;
-  }
-
-  //"teacher registration"
-  else {
-    url = `${process.env.REACT_APP_BASE_URL}/users/teacher`;
-  }
-  axios({
-    method: "POST",
-    url: url,
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-    },
-    withCredentials: true,
-    data: payload,
-  })
-    .then((response) => {
-      if (response.data.success) {
-        return response.data.email;
-      } else {
-        console.log(response);
-        return false;
-      }
-    })
-    .catch((err) => console.log(err));
-};
-
-export { submitForm, sendData };
+}
