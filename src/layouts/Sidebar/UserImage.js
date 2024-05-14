@@ -69,7 +69,6 @@ export default function UserImage(props) {
     })
       .then((response) => {
         if (response.data.success) {
-          console.log(response.data);
           setImageData(response.data.img);
         } else {
           console.log(response.message);

@@ -2,20 +2,20 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import ManagerRegister from "./ManagerRegister";
 import styles from "../../features/register/styles/registerForm.module.scss";
-import { submitForm } from "../../lib/registerLogic";
 import {
   AddressFields,
   ContactFields,
 } from "../../features/register/formFields/index";
 import { InputBox } from "../../features/register/formFields/InputBox";
 import { AlignedContainer } from "../../components/ui/styledComponents";
+import adjustFormData from "../../hooks/adjustFormData";
 
 export default function KgRegister() {
   const [data, setData] = useState({});
 
   const saveKgForm = (e) => {
     e.preventDefault();
-    let kgObj = submitForm(e);
+    let kgObj = adjustFormData(e);
     setData({ kg: { ...kgObj, verificationCodes: [] } });
   };
 

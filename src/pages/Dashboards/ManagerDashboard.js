@@ -8,7 +8,7 @@ import Todo from "../../features/todo/components/ToDo";
 import UserInfoSidebar from "../../layouts/Sidebar/UserInfoSidebar";
 import { AlignedContainer } from "../../components/ui/styledComponents";
 
-export default function Mpage(props) {
+export default function Mpage() {
   return (
     <AlignedContainer>
       <div className={styles.container}>

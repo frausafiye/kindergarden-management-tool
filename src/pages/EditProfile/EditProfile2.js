@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
 import styles from "./styles/Editprofile.module.scss";
-import { submitForm } from "../../lib/registerLogic";
 import {
   NameFields,
   ContactFields,
@@ -13,6 +12,7 @@ import { MyContext } from "../../Container";
 import { useHistory } from "react-router-dom/cjs/react-router-dom";
 import { AlignedContainer } from "../../components/ui/styledComponents";
 import { EditPasswordForm } from "./EditPasswordForm";
+import adjustFormData from "../../hooks/adjustFormData";
 
 export default function EditProfile(props) {
   const { setUser, user, authCheckHandler } = useContext(MyContext);
@@ -41,7 +41,7 @@ export default function EditProfile(props) {
 
   const changePasswordHandler = (e) => {
     e.preventDefault();
-    let formObj = submitForm(e);
+    let formObj = adjustFormData(e);
     axios(
       `${process.env.REACT_APP_BASE_URL}/users/updatePassword/${user._id}`,
       {
@@ -66,7 +66,7 @@ export default function EditProfile(props) {
 
   const editHandler = (e) => {
     e.preventDefault();
-    let formObj = submitForm(e);
+    let formObj = adjustFormData(e);
     axios(`${process.env.REACT_APP_BASE_URL}/users/users/${user._id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
@@ -79,7 +79,7 @@ export default function EditProfile(props) {
           setUser(result.data.updatedUser);
           setShowSuccess(true);
         } else {
-          console.log(result); //prepare an error box!
+          console.log(result); //prepare an error modal!
         }
       })
       .catch((err) => authCheckHandler(err));

@@ -1,31 +1,8 @@
 import { Link } from "react-router-dom";
 import styles from "../../features/dashboards/styles/ManagerDashboard.module.scss";
-import useFetchAllGroups from "./hooks/useFetchAllGroups";
+import useFetchData from "./hooks/useFetchData";
 export default function GroupsCard() {
-  const { data: groups, loading, error } = useFetchAllGroups();
-
-  // const getAllGroups = () => {
-  //   axios({
-  //     method: "GET",
-  //     url: `${process.env.REACT_APP_BASE_URL}/groups/getAllGroups/${user.kg}`,
-  //     headers: {
-  //       Accept: "application/json",
-  //       "Content-Type": "application/json",
-  //     },
-  //     withCredentials: true,
-  //   })
-  //     .then((result) => {
-  //       if (result.data.success) {
-  //         setGroups(result.data.allGroups);
-  //       } else {
-  //         console.log(result);
-  //       }
-  //     })
-  //     .catch((err) => authCheckHandler(err));
-  // };
-  // useEffect(() => {
-
-  // }, []);
+  const { data: groups, loading, error } = useFetchData("groups");
   return (
     <div className={styles.group}>
       <h3>Groups</h3>
@@ -35,7 +12,7 @@ export default function GroupsCard() {
       {error && <p>Oopps! Something went wrong..</p>}
       {groups && (
         <>
-          <p>Total: {groups.allGroups.length}</p>
+          <p>Total: {groups.length}</p>
           <Link to="/addgroup">
             <button type="submit" value="add" className="add btn">
               Add

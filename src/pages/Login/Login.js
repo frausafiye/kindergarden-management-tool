@@ -43,7 +43,6 @@ export default function Login(props) {
           localStorage.setItem("user", JSON.stringify(response.data.user));
         } else {
           console.log(response);
-          //display a warning box for 3 min
         }
       })
       .catch((err) => {

@@ -26,23 +26,26 @@ export default function useFetch({ url }) {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   useEffect(() => {
-    dispatch({ type: ACTIONS.API_REQUEST });
-    axios({
-      method: "GET",
-      url: `${process.env.REACT_APP_BASE_URL}/${url}`,
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      withCredentials: true,
-    })
-      .then((result) => {
-        dispatch({ type: ACTIONS.FETCH_DATA, payload: result.data });
+    if (url !== "") {
+      dispatch({ type: ACTIONS.API_REQUEST });
+      axios({
+        method: "GET",
+        url: `${process.env.REACT_APP_BASE_URL}/${url}`,
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        withCredentials: true,
       })
-      .catch((err) => {
-        dispatch({ type: ACTIONS.ERROR, payload: err });
-        authCheckHandler(err);
-      });
+        .then((result) => {
+          dispatch({ type: ACTIONS.FETCH_DATA, payload: result.data });
+        })
+        .catch((err) => {
+          console.log(err);
+          dispatch({ type: ACTIONS.ERROR, payload: err });
+          authCheckHandler(err);
+        });
+    }
   }, [url, authCheckHandler]);
 
   return state;

@@ -1,36 +1,10 @@
-import axios from "axios";
-import React, { useContext, useEffect, useState } from "react";
+import useFetchData from "./hooks/useFetchData";
 import { Link } from "react-router-dom";
-import { MyContext } from "../../Container";
 import styles from "../../features/dashboards/styles/ManagerDashboard.module.scss";
 
 export default function ChildrenCard() {
-  const [children, setChildren] = useState([]);
-  const { user, authCheckHandler } = useContext(MyContext);
-  const getAllChildren = () => {
-    axios({
-      method: "GET",
-      withCredentials: true,
-      url: `${process.env.REACT_APP_BASE_URL}/child/getAllChildren/${user.kg}`,
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-    })
-      .then((response) => {
-        if (response.data.success) {
-          setChildren(response.data.allChildren);
-        } else {
-          console.log(response);
-        }
-      })
-      .catch((err) => {
-        authCheckHandler(err);
-      });
-  };
-  useEffect(() => {
-    getAllChildren();
-  }, []);
+  const { data: children, loading, error } = useFetchData("children");
+
   return (
     <div className={styles.children}>
       <h3>Childrens</h3>
@@ -39,7 +13,9 @@ export default function ChildrenCard() {
         how many children in that kindergarden and all the children necessary
         information!
       </p>
-      <p>Total: {children.length}</p>
+      {loading && <p>Loading</p>}
+      {error && <p>Oopps! Something went wrong..</p>}
+      {children && <p>Total: {children.length}</p>}
       <Link to="/cregister">
         <button type="submit" value="add" className="add btn">
           Add

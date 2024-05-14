@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import styles from "../styles/ChildStyle/ChildRegister.module.scss";
-import useSubmitFormData from "../../hooks/useSubmitFormData";
+import useSendFormData from "../../../hooks/useSendFormData";
 import adjustFormData from "../../../hooks/adjustFormData";
 import { MyContext } from "../../../Container";
 import {
@@ -10,7 +10,7 @@ import {
   FormButtons,
   EmergencyContactFields,
   Heading,
-} from "./index";
+} from "../formFields/index";
 
 export default function ChildRegister(props) {
   const { kg, user } = useContext(MyContext);
@@ -36,8 +36,9 @@ export default function ChildRegister(props) {
   const {
     isLoading,
     error,
+    responseData,
     handleSubmit: postRegisterForm,
-  } = useSubmitFormData("child registration", {
+  } = useSendFormData("child registration", {
     ...formData.child,
     kg: kg._id,
     attendance: [
@@ -53,17 +54,7 @@ export default function ChildRegister(props) {
     e.preventDefault();
     const adjustedFormData = adjustFormData(e);
     console.log(adjustedFormData);
-    // const { data, loading, error } = useSubmitFormData("child registration", {
-    //   ...formData.child,
-    //   kg: kg._id,
-    //   attendance: [
-    //     {
-    //       attendanceStatus: "notHere",
-    //       date: new Date().toISOString().split("T")[0],
-    //       // date: "yyyy-mm-dd"
-    //     },
-    //   ],
-    // });
+
     await postRegisterForm(adjustedFormData);
     if ((!error, !isLoading)) {
       handleMessage(true, "Thank you! Child added.");

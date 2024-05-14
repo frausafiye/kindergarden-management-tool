@@ -1,34 +1,40 @@
 import { useState, useContext } from "react";
-import { MyContext } from "../../Container";
+import { MyContext } from "../Container";
 import axios from "axios";
+import { useLocation } from "react-router-dom/cjs/react-router-dom";
 const useSendFormData = () => {
   const { authCheckHandler } = useContext(MyContext);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const [responseData, setResponseData] = useState(null);
+  const location = useLocation();
 
-  const handleSubmit = async (type, payload) => {
+  const handleSubmit = async (payload) => {
     setIsLoading(true);
     setError(null);
 
     let url = "";
-    // "kg registration"
-    if (type === "kg registration") {
-      url = `${process.env.REACT_APP_BASE_URL}/kg/register`;
+    // if (type === "kg registration") {
+    if (location.pathname === "kgregister") {
+      //kg registration
+      if (payload.kg) {
+        url = `${process.env.REACT_APP_BASE_URL}/kg/register`;
+      }
+      //manager registration
+      else {
+        url = `${process.env.REACT_APP_BASE_URL}/users/managers`;
+      }
     }
-
-    // "manager registration"
-    else if (type === "manager registration") {
+    // else if (type === "manager registration") {
+    else if (location.pathname === "mregister") {
       url = `${process.env.REACT_APP_BASE_URL}/users/managers`;
     }
-
-    // "child registration"
-    else if (type === "child registration") {
+    // else if (type === "child registration") {
+    else if (location.pathname === "cregister") {
       url = `${process.env.REACT_APP_BASE_URL}/child/addChild`;
     }
-
     //"teacher registration"
-    else {
+    else if (location.pathname === "tregister") {
       url = `${process.env.REACT_APP_BASE_URL}/users/teacher`;
     }
 

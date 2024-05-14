@@ -1,10 +1,10 @@
-import StaffRegister from "../../features/register/formFields/StaffRegisterForm";
+import ManagerRegisterForm from "../../features/register/forms/ManagerRegistration";
 import { AlignedContainer } from "../../components/ui/styledComponents";
 
 const ManagerRegister = (props) => {
   return (
     <AlignedContainer>
-      <StaffRegister type="manager" kg={props.kg || null} />
+      <ManagerRegisterForm kg={props.kg || null} />
     </AlignedContainer>
   );
 };

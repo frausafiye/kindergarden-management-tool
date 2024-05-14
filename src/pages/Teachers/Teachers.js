@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { MyContext } from "../../Container";
 import axios from "axios";
-import UserCard from "../../components/cards/UserCard";
+import UserCard from "../../components/cards/userCard/UserCard";
 import styles from "./styles/Teachers.module.scss";
 import { AlignedContainer } from "../../components/ui/styledComponents";
 
