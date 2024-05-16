@@ -2,10 +2,12 @@ import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { MyContext } from "../../../Container";
 import styles from "../styles/groups.module.scss";
+import { useHistory } from "react-router-dom/cjs/react-router-dom";
 
 export default function AllGroups(props) {
   const [groups, setGroups] = useState([]);
   const { user, authCheckHandler } = useContext(MyContext);
+  const history = useHistory();
 
   useEffect(() => {
     axios({
@@ -28,11 +30,11 @@ export default function AllGroups(props) {
   }, []);
 
   const handleEdit = (group) => {
-    props.history.push({ pathname: "/editgroup", state: { group: group } });
+    history.push({ pathname: "/editgroup", state: { group: group } });
   };
 
   const viewChildrenHandler = (groupId) => {
-    props.history.push({ pathname: "/children", state: { group: groupId } });
+    history.push({ pathname: "/children", state: { group: groupId } });
   };
   return (
     <div className={styles.container}>
@@ -42,7 +44,7 @@ export default function AllGroups(props) {
             <div className={styles.acontainer} key={group._id}>
               <div className={styles.col1}>
                 <p className={styles.bold}>Group:</p>
-                <p className={styles.bold2}>{group.groupName}</p>
+                <p className={styles.bold2}>{group?.groupName.toUpperCase()}</p>
               </div>
               <div className={styles.col}>
                 <p className={styles.info}>Teachers:</p>
@@ -72,7 +74,7 @@ export default function AllGroups(props) {
                   className="fixedit btn"
                   onClick={() => handleEdit(group)}
                 >
-                  Edit
+                  edit
                 </button>
                 <button
                   type="submit"

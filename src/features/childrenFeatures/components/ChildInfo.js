@@ -4,6 +4,8 @@ import kid1 from "../../../assets/kid_avatar.svg";
 import kid2 from "../../../assets/kid_avatar2.svg";
 import kid3 from "../../../assets/kid_avatar3.svg";
 import kid4 from "../../../assets/kid_avatar4.svg";
+import EmergencyInfo from "./EmergencyInfo";
+import filterEmergencyContacts from "./lib/filterEmergencyContacts";
 export default function ChildInfo({ child, imageNum }) {
   const {
     firstName,
@@ -17,6 +19,8 @@ export default function ChildInfo({ child, imageNum }) {
   } = child;
   const images = [kid1, kid2, kid3, kid4];
   const randImg = images[imageNum];
+  const filteredContacts = filterEmergencyContacts(emergencyContact);
+
   return (
     <>
       <div className={styles.kidimg}>
@@ -29,27 +33,24 @@ export default function ChildInfo({ child, imageNum }) {
       </div>
       <div className={styles.maininfo}>
         <div className={styles.col}>
-          <p className={styles.info}>{birthday.split("T")[0]}</p>
+          <p className={styles.info}>{`Birthday: ${birthday.split("T")[0]}`}</p>
         </div>
         <div className={styles.col}>
           <p className={styles.info}>
-            {address.street} {address.number},{address.postcode} {address.city}
+            {`Address: ${address.street} ${address.number} ${address.postcode} ${address.city}`}
           </p>
         </div>
+
         <div className={styles.col}>
-          <p className={styles.info}>Emergency Contact 1:</p>
-          <p className={styles.info}>
-            {emergencyContact[0].emerName1}
-            {emergencyContact[0].emerEmail1}
-            {emergencyContact[0].emerNumber1}
-          </p>
-        </div>
-        <div className={styles.col}>
-          <p className={styles.info}>Emergency Contact 2:</p>
-          <p className={styles.info}>
-            {emergencyContact[1].emerName2} {emergencyContact[1].emerEmail2}
-            {emergencyContact[1].emerNumber2}
-          </p>
+          {/* <div className={styles.underline}> */}
+          <p className={styles.info}>Emergency Contacts:</p>
+          {/* <div className={styles.lineThrough}></div> */}
+          {/* </div> */}
+          {filteredContacts.length ? (
+            <EmergencyInfo emergencyContact={filteredContacts} />
+          ) : (
+            <p className={styles.info}>No emergency contact info provided!</p>
+          )}
         </div>
 
         <div className={styles.col2}>

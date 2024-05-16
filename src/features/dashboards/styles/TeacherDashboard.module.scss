@@ -26,6 +26,9 @@
     border-radius: 50%;
     border: solid 3px $primary-orange;
   }
+  input[type="file"] {
+    display: none;
+  }
 }
 .featuresBox {
   width: 100%;

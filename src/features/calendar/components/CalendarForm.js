@@ -89,10 +89,7 @@ export default function CalendarForm(props) {
           Submit
         </button>
         {message.status && (
-          <p
-            className={!message.status.ok ? "errorMsg" : ""}
-            style={{ fontSize: "0.65rem", margin: "0.5rem" }}
-          >
+          <p className={!message.status.ok ? "errorMsg" : "successMsg"}>
             {message.status.msg}
           </p>
         )}

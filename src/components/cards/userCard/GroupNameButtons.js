@@ -52,11 +52,7 @@ export const GroupNameButtons = ({ id, groups, setShowGroups }) => {
               <div>
                 <label key={group.groupName} htmlFor={group.groupName}>
                   <input
-                    style={{
-                      display: "inline",
-                      width: "20px",
-                      height: "20px",
-                    }}
+                    className={styles.itemsInput}
                     type="radio"
                     id={group.groupName}
                     name="group"
@@ -71,11 +67,7 @@ export const GroupNameButtons = ({ id, groups, setShowGroups }) => {
           <div>
             <label key="none" htmlFor="none">
               <input
-                style={{
-                  display: "inline",
-                  width: "20px",
-                  height: "20px",
-                }}
+                className={styles.itemsInput}
                 type="radio"
                 id="none"
                 name="group"
@@ -89,8 +81,7 @@ export const GroupNameButtons = ({ id, groups, setShowGroups }) => {
       </div>
       <button
         type="submit"
-        className="add btn"
-        style={{ display: "block", margin: "0 auto" }}
+        className="add btn block-btn"
         onClick={() => changeGroup()}
         disabled={selectedGroup ? false : true}
       >

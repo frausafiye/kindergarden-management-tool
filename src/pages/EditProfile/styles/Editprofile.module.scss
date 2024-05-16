@@ -36,6 +36,10 @@
 .address {
   padding-left: 5rem;
 }
+.formBtnContainer {
+  display: flex;
+  justify-content: flex-end;
+}
 .formBtn {
   width: 100px;
 }

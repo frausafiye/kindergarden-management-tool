@@ -1,9 +1,6 @@
 export const StatusMessage = ({ message }) => {
   return (
-    <p
-      className={!message.status.ok ? "errorMsg" : "successMsg"}
-      style={{ fontSize: "0.65rem" }}
-    >
+    <p className={!message.status.ok ? "errorMsg" : "successMsg"}>
       {message.status.msg}
     </p>
   );

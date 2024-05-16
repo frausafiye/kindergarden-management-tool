@@ -57,7 +57,7 @@ export default function ChildGroupEdit({ child, groups }) {
             </label>
           );
         })}
-        <label key="none" htmlFor="none" style={{ flexDirection: "row" }}>
+        <label key="none" htmlFor="none">
           <input
             type="radio"
             id="none"

@@ -33,7 +33,7 @@ export const RoleButtons = ({ id, setShowRoles }) => {
           <div>
             <label htmlFor="Teacher">
               <input
-                style={{ display: "inline", width: "20px", height: "20px" }}
+                className={styles.itemsInput}
                 type="radio"
                 id="Teacher"
                 name="role"
@@ -46,7 +46,7 @@ export const RoleButtons = ({ id, setShowRoles }) => {
           <div>
             <label htmlFor="Manager">
               <input
-                style={{ display: "inline", width: "20px", height: "20px" }}
+                className={styles.itemsInput}
                 type="radio"
                 id="Manager"
                 name="role"
@@ -60,8 +60,7 @@ export const RoleButtons = ({ id, setShowRoles }) => {
       </div>
       <button
         type="submit"
-        className="add btn"
-        style={{ display: "block", margin: "0 auto" }}
+        className="add btn block-btn"
         onClick={() => changeRole()}
         disabled={selectedRole ? false : true}
       >

@@ -120,7 +120,7 @@ export default function EditProfile(props) {
               />
               <AddressFields defaultAddress={nextUser.address} />
             </div>
-            <div style={{ display: "flex", justifyContent: "flex-end" }}>
+            <div className={styles.formBtnContainer}>
               <FormButtons
                 type={"user"}
                 redirectOnCancelUrl={

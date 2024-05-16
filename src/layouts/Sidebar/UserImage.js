@@ -91,7 +91,6 @@ export default function UserImage(props) {
         type="file"
         id="file"
         ref={inputFile}
-        style={{ display: "none" }}
         onChange={(e) => {
           setFile(e.target.files[0]);
         }}
