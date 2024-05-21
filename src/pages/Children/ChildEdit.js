@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link, useHistory } from "react-router-dom";
 import styles from "../../features/childrenFeatures/styles/ChildEdit.module.scss";
 import { MyContext } from "../../Container";
-import { AlignedContainer } from "../../components/ui/styledComponents";
+import { AlignedContainer } from "../../components/ui/AlignedContainer";
 
 export default function ChildEdit(props) {
   const { authCheckHandler } = useContext(MyContext);

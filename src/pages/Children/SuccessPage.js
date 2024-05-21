@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import styles from "../../features/childrenFeatures/styles/success.module.scss";
-import { AlignedContainer } from "../../components/ui/styledComponents";
+import { AlignedContainer } from "../../components/ui/AlignedContainer";
 
 export default function SuccessPage(props) {
   let timer;

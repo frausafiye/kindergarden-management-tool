@@ -10,7 +10,7 @@ import {
 import axios from "axios";
 import { MyContext } from "../../Container";
 import { useHistory } from "react-router-dom/cjs/react-router-dom";
-import { AlignedContainer } from "../../components/ui/styledComponents";
+import { AlignedContainer } from "../../components/ui/AlignedContainer";
 import { EditPasswordForm } from "./EditPasswordForm";
 import adjustFormData from "../../hooks/adjustFormData";
 

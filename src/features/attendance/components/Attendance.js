@@ -6,7 +6,7 @@ import axios from "axios";
 import Here from "./Here";
 import NotHere from "./NotHere";
 import { MyContext } from "../../../Container";
-import { AlignedContainer } from "../../../components/ui/styledComponents";
+import { AlignedContainer } from "../../../components/ui/AlignedContainer";
 
 export default function Attendance() {
   const { user, authCheckHandler } = useContext(MyContext);

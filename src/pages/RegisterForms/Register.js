@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { AlignedContainer } from "../../components/ui/styledComponents";
+import { AlignedContainer } from "../../components/ui/AlignedContainer";
 import styles from "../../features/register/styles/registerForm.module.scss";
 
 export default function Register() {

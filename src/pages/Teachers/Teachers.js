@@ -3,7 +3,7 @@ import { MyContext } from "../../Container";
 import axios from "axios";
 import UserCard from "../../components/cards/userCard/UserCard";
 import styles from "./styles/Teachers.module.scss";
-import { AlignedContainer } from "../../components/ui/styledComponents";
+import { AlignedContainer } from "../../components/ui/AlignedContainer";
 
 export default function Teachers() {
   const { kg, authCheckHandler } = useContext(MyContext);

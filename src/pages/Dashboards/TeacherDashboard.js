@@ -5,7 +5,7 @@ import GroupCard from "../../components/cards/GroupCard";
 import ToDo from "../../features/todo/components/ToDo";
 import UserInfoSidebar from "../../layouts/Sidebar/UserInfoSidebar";
 import { MyContext } from "../../Container";
-import { AlignedContainer } from "../../components/ui/styledComponents";
+import { AlignedContainer } from "../../components/ui/AlignedContainer";
 
 export default function Tpage(props) {
   const { user } = useContext(MyContext);

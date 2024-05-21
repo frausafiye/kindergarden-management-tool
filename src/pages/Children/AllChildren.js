@@ -3,7 +3,7 @@ import axios from "axios";
 import styles from "../../features/childrenFeatures/styles/children.module.scss";
 import { MyContext } from "../../Container";
 import Child from "../../features/childrenFeatures/components/Child";
-import { AlignedContainer } from "../../components/ui/styledComponents";
+import { AlignedContainer } from "../../components/ui/AlignedContainer";
 
 export default function AllChildren(props) {
   const [children, setChildren] = useState([]);

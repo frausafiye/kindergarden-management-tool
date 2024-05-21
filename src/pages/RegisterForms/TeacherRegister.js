@@ -1,5 +1,5 @@
 import TeacherRegisterForm from "../../features/register/forms/TeacherRegistration";
-import { AlignedContainer } from "../../components/ui/styledComponents";
+import { AlignedContainer } from "../../components/ui/AlignedContainer";
 
 const TeacherRegister = () => {
   return (

@@ -1,4 +1,4 @@
-import { AlignedContainer } from "../components/ui/styledComponents";
+import { AlignedContainer } from "../components/ui/AlignedContainer";
 
 export default function NotFound() {
   return (

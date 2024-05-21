@@ -7,7 +7,7 @@ import {
   ContactFields,
 } from "../../features/register/formFields/index";
 import { InputBox } from "../../features/register/formFields/InputBox";
-import { AlignedContainer } from "../../components/ui/styledComponents";
+import { AlignedContainer } from "../../components/ui/AlignedContainer";
 import adjustFormData from "../../hooks/adjustFormData";
 
 export default function KgRegister() {

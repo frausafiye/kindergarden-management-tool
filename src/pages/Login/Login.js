@@ -1,10 +1,10 @@
 import { useState, useEffect, useContext } from "react";
-import { Link } from "react-router-dom";
 import styles from "./styles/Login.module.scss";
 import axios from "axios";
 import { MyContext } from "../../Container";
 import { useHistory } from "react-router-dom/cjs/react-router-dom";
-import { AlignedContainer } from "../../components/ui/styledComponents";
+import { AlignedContainer } from "../../components/ui/AlignedContainer";
+import { LoginButtons } from "./LoginButtons";
 
 export default function Login(props) {
   const { isLogin, setIsLogin, setUser, user, authCheckHandler } =
@@ -85,31 +85,7 @@ export default function Login(props) {
               />
             </div>
             <br />
-            <div className={styles.btnContainer}>
-              <button type="submit" value="Login" className="next btn">
-                Login
-              </button>
-              <Link to="/">
-                <button className="cancel btn">Cancel</button>
-              </Link>
-            </div>
-            <div className={styles.btnContainer}>
-              <button
-                type="submit"
-                value="Try it"
-                className="submit btn"
-                id="explore"
-                onClick={() => {
-                  console.log(process.env.REACT_APP_EXPLORE_ACCOUNT_EMAIL);
-                  setFormData({
-                    email: process.env.REACT_APP_EXPLORE_ACCOUNT_EMAIL,
-                    password: process.env.REACT_APP_EXPLORE_ACCOUNT_PASSWORD,
-                  });
-                }}
-              >
-                Just explore it
-              </button>
-            </div>
+            <LoginButtons setFormData={setFormData} />
           </div>
         </form>
       </div>

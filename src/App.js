@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // Layout
 import Home from "./pages/Home/Home";
 import Navbar from "./layouts/Navbar/Navbar";
-import Footer from "./layouts/Footer/index";
+import Footer from "./layouts/Footer/Footer";
 import "./assets/globalCSS/app.scss";
 
 // Login & Error

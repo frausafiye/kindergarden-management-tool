@@ -7,7 +7,7 @@ import {
 import { faCalendarMinus } from "@fortawesome/free-regular-svg-icons";
 import kids from "../../assets/kids.svg";
 import styles from "./styles/Home.module.scss";
-import { AlignedContainer } from "../../components/ui/styledComponents";
+import { AlignedContainer } from "../../components/ui/AlignedContainer";
 
 export default function Home() {
   const arrow = <FontAwesomeIcon icon={faExchangeAlt} size="2x" />;

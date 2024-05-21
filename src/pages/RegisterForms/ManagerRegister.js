@@ -1,5 +1,5 @@
 import ManagerRegisterForm from "../../features/register/forms/ManagerRegistration";
-import { AlignedContainer } from "../../components/ui/styledComponents";
+import { AlignedContainer } from "../../components/ui/AlignedContainer";
 
 const ManagerRegister = (props) => {
   return (

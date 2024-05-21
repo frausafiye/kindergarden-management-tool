@@ -1,15 +1,6 @@
-import React from "react";
+import { Link } from "react-router-dom";
 import { FaFacebook, FaInstagram, FaYoutube, FaTwitter } from "react-icons/fa";
-import {
-  Img,
-  FooterContainer,
-  FooterWrap,
-  SocialMedia,
-  SocialMediaWrap,
-  SocialLogo,
-  SocialIcons,
-  SocialIconLink,
-} from "../../components/ui/styledComponents";
+import styles from "./styles/footer.module.scss";
 import { animateScroll as scroll } from "react-scroll";
 import logo from "../../assets/logo.svg";
 
@@ -19,55 +10,59 @@ const Footer = () => {
   };
 
   return (
-    <FooterContainer>
-      <FooterWrap>
-        <SocialMedia>
-          <SocialMediaWrap>
-            <SocialLogo to="/" onClick={toggleHome}>
-              <Img src={logo} alt="lg" />
+    <footer className={styles.container}>
+      <div className={styles.wrap}>
+        <section className={styles.socialMedia}>
+          <div className={styles.socialMediaWrap}>
+            <Link to="/" onClick={toggleHome} className={styles.socialLogo}>
+              <img className={styles.img} src={logo} alt="lg" />
               KitaCare
-            </SocialLogo>
-            <SocialIcons>
-              <SocialIconLink
+            </Link>
+            <div className={styles.socialIcons}>
+              <a
+                className={styles.socialIconLink}
                 href="/"
                 target="_blank"
                 aria-label="Facebook"
                 rel="noopenernoreferrer"
               >
                 <FaFacebook />
-              </SocialIconLink>
+              </a>
 
-              <SocialIconLink
+              <a
+                className={styles.socialIconLink}
                 href="/"
                 target="_blank"
                 aria-label="Instagram"
                 rel="noopenernoreferrer"
               >
                 <FaInstagram />
-              </SocialIconLink>
+              </a>
 
-              <SocialIconLink
+              <a
+                className={styles.socialIconLink}
                 href="/"
                 target="_blank"
                 aria-label="Youtube"
                 rel="noopenernoreferrer"
               >
                 <FaYoutube />
-              </SocialIconLink>
+              </a>
 
-              <SocialIconLink
+              <a
+                className={styles.socialIconLink}
                 href="/"
                 target="_blank"
                 aria-label="Twitter"
                 rel="noopenernoreferrer"
               >
                 <FaTwitter />
-              </SocialIconLink>
-            </SocialIcons>
-          </SocialMediaWrap>
-        </SocialMedia>
-      </FooterWrap>
-    </FooterContainer>
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </footer>
   );
 };
 

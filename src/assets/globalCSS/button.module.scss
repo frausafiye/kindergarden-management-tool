@@ -22,6 +22,9 @@
     color: $primary-orange;
   }
 }
+.explore {
+  margin-right: 0;
+}
 
 .login {
   background-color: $primary-blue;
@@ -184,7 +187,6 @@
   .add,
   .view,
   .att,
-  .cancel,
   .changeBtn {
     //padding: 5px;
     font-size: 0.8rem;

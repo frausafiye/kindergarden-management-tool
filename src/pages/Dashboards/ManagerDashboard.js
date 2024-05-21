@@ -6,7 +6,7 @@ import ChildrenCard from "../../components/cards/ChildrenCard";
 import GroupsCard from "../../components/cards/GroupsCard";
 import Todo from "../../features/todo/components/ToDo";
 import UserInfoSidebar from "../../layouts/Sidebar/UserInfoSidebar";
-import { AlignedContainer } from "../../components/ui/styledComponents";
+import { AlignedContainer } from "../../components/ui/AlignedContainer";
 
 export default function Mpage() {
   return (

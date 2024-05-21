@@ -5,7 +5,7 @@ import styles from "./styles/Editprofile.module.scss";
 import { MyContext } from "../../Container";
 import { submitForm } from "../../lib/registerLogic";
 import { useHistory } from "react-router-dom/cjs/react-router-dom";
-import { AlignedContainer } from "../../components/ui/styledComponents";
+import { AlignedContainer } from "../../components/ui/AlignedContainer";
 
 export default function EditProfile(props) {
   const { setUser, user, authCheckHandler } = useContext(MyContext);
